@@ -1,0 +1,38 @@
+= Agents Governance Profile
+
+This is a profile of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticate Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things).
+
+== Overview
+
+_coming_
+
+== Details
+
+This ontology is documented in full at:
+
+* https://idn-au.github.io/agents-governance-profile/scores.html
+
+== Licensing & Rights
+
+The creators and maintainers of this model wish for it to be available for use as widely as possible. The model is thus licensed using the permissive, and pretty standard, https://creativecommons.org/licenses/by/4.0/[Creative Commons BY 4.0]  license, a copy of the deed of which is in the file LICENSE.
+
+This software is copyright as follows:
+
+(c) Indigenous Data Network, 2022
+
+== Contact
+
+Please contact the Indigenous Data Network maintainers of this code for all issues:
+
+_Lead Developer_: +
+*Nicholas Car* +
+GitHub: https://github.com/nicholascar[@nicholascar] +
+Email: nick@kurrawong.net +
+
+_Project Owner_: +
+*Sandra Silcot* +
+GitHub: https://github.com/ssilcot[@ssilcot] +
+
+_Owner Organisation_ +
+*Indigenous Data Network* +
+https://idnau.org
