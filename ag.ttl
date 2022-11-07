@@ -1,0 +1,35 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
+PREFIX sdo: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prov:Agent
+    a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    owl:disjointWith :InstantaneousEvent ;
+    sdo:name "Agent" ;
+    sdo:description "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
+.
+
+sdo:Person
+    a owl:Class ;
+    rdfs:subClassOf prov:Agent ;
+    sdo:name "Person" ;
+    sdo:description "A person (alive, dead, undead, or fictional)."@en ;
+.
+
+sdo:Organization
+    a owl:Class ;
+    rdfs:subClassOf prov:Agent ;
+    sdo:name "Organization" ;
+    sdo:alternateName "Organisation" ;
+    sdo:description "An organization such as a school, NGO, corporation, club, etc."@en ;
+.
+

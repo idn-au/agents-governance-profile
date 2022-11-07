@@ -1,0 +1,83 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
+PREFIX sdo: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<http://linked.data.gov.au/def/agp>
+    a owl:Ontology , prof:Profile ;
+    dcterms:provenance "This profile of schema.org, PROV-O, DCAT and others was made within the IDN's ID Catalogue project 2021 - 2022."@en ;
+    owl:versionIRI <http://linked.data.gov.au/def/agp/0.0.1> ;
+    owl:versionInfo "0.0.1" ;
+    sdo:codeRespository "https://github.com/idn-au/agents-governance-profile/"^^xsd:anyURI ;
+    sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
+    sdo:copyrightNotice "(c) Indigenous Data Network, 2022" ;
+    sdo:copyrightYear "2022"^^xsd:gYear ;
+    sdo:creator <https://orcid.org/0000-0002-8742-7730> ;
+    sdo:dateCreated "2022-11-01"^^xsd:date ;
+    sdo:dateIssued "2000-00-00"^^xsd:date ;
+    sdo:dateModified "2022-11-07"^^xsd:date ;
+    sdo:description "A profile of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticated Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things), in particular data."@en ;
+    sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    sdo:name "Agents Governance Profile"@en ;
+    sdo:publisher <https://linked.data.gov.au/org/idn> ;
+    prof:hasResource [
+        rdfs:label "Specification Document" ;
+        prof:hasArtifact <https://linked.data.gov.au/def/agp/spec> ;
+        dcterms:format "text/html" ;
+        prof:hasRole role:specification ;
+    ] ,
+    [
+        rdfs:label "SHACL Validator" ;
+        rdfs:comment "A validator that tests data for conformance to the specific requirements of the Agents Governance Profile only and does not test for requirements that Profile inherits from other Profiles or Standards."@en ;
+        prof:hasArtifact <https://linked.data.gov.au/def/agp/validator> ;
+        dcterms:format "text/turtle" ;
+        prof:hasRole role:validation ;
+    ],
+    [
+        rdfs:label "Compounded Validator" ;
+        rdfs:comment """A validator that contains the Agents Governance Profile validator and those of Profiles and Standards that it profiles.
+
+If data is valida according to this Validator, it is also valid according to all the Profiles and Standards that the Agents Governance Profile derives from."""@en ;
+        prof:hasArtifact <https://linked.data.gov.au/def/agp/compounded-validator> ;
+        dcterms:format "text/turtle" ;
+        prof:hasRole role:validation ;
+    ],
+    [
+        rdfs:label "Code Repository" ;
+        prof:hasArtifact <https://linked.data.gov.au/def/agp/repo> ;
+        prof:hasRole role:repository ;
+    ] ;
+    prof:isProfileOf
+        <https://www.w3.org/TR/vocab-dcat/> ,
+        <https://www.w3.org/TR/prov-o/> ,
+        <https://schema.org> ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car"@en ;
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:affiliation <https://kurrawong.net> ;
+.
+
+<https://kurrawong.net>
+    a sdo:Organization ;
+    sdo:name "Kurrawong AI" ;
+    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
+    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a sdo:Organization ;
+    sdo:name "Indigenous Data Network" ;
+    sdo:description "The IDN is within the University of Melbourne. It was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
+    sdo:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
+.

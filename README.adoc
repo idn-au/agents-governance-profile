@@ -1,16 +1,12 @@
 = Agents Governance Profile
 
-This is a profile of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticate Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things).
+A profile of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticated Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things), in particular data.
 
-== Overview
+== Profile Resources
 
-_coming_
+The contents of this repository form a "Profile", that is a Standard that constrains and extends other Standards, as described by https://www.w3.org/TR/dx-prof/[The Profiles Vocabulary].
 
-== Details
-
-This ontology is documented in full at:
-
-* https://idn-au.github.io/agents-governance-profile/scores.html
+See the https://linked.data.gov.au/def/agp[Profile Declaration] for details of all the profile parts (Resources).
 
 == Licensing & Rights
 
