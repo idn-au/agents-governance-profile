@@ -210,9 +210,12 @@ code {
     color:rgb(50, 50, 50);
 }
 
-#namespaces dl {
-    font-size: small;
+dl {
     padding-left: 20px;
+}
+
+dl dt {
+    margin-bottom: 3px;
 }
 
 .figure {
