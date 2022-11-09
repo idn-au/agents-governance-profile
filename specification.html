@@ -174,7 +174,7 @@
                 </div>
                 <p>An example, Person X might have created Data Y and is its "originator" and, Person X belongs to Organisation Z. Through some arrangement, things created by members of Organisation Z are managed by it so Organisation Z is the "custodian" of the data. The figure below shows these relations.</p>
                 <div id="fig-intro-eg-1" class="figure">
-                    <img src="img/Intro-EG.png" alt="Intro Example" style="width:500px;" />
+                    <img src="img/Intro-EG1.png" alt="Intro Example" style="width:500px;" />
                     <p class="caption"><strong>Figure Intro 1:</strong> An informal diagram showing Agent/Agent and Entity/Entity relations</p>
                 </div>
                 <p>The complete key of elements in all the formally-defined figures in this Specification is given in the figure below.</p>
@@ -192,7 +192,7 @@
                 <p>The Agent &rarr; Entity &amp; Agent &rarr; Agent relations modelled by this Specification are done so using the <em>qualified relations</em> pattern  which is described for RDF modelling in the <a href="https://patterns.dataincubator.org/book/qualified-relation.html"><em>Linked Data Patterns</em> online textbook</a> but which are summarised like this:</p>
                 <div class="figure">
                     <img src="img/Qualified.png" alt="Intro Example" style="width:650px;" />
-                    <p class="caption"><strong>Figure Qualified:</strong> Where Resource A has a relation to Resource B and that relation is described by a role, Resource C, a pattern that interjects an anonymous node between A &amp; B can be made that links the via a relationship to C. This figure shows Resources A linked to an anonymous node [ ] by property x which then links to the target Resource B and the qualifying Resource C.</p>
+                    <p class="caption"><strong>Figure Qualified:</strong> Where Resource A has a relation to Resource B and that relation is described by a role, Resource C, a pattern that interjects an anonymous node (a <code>Blank Node</code>) between A &amp; B can be made that links them via a relationship to C. This figure shows Resource A linked to an anonymous node, [ ], by property x which then links to the target Resource B and the qualifying Resource C.</p>
                 </div>
                 <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalogue Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
                 <h4>1.3 Use of vocabularies</h4>
