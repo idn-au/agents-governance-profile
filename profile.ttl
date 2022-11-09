@@ -11,10 +11,10 @@ PREFIX sdo: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-<http://linked.data.gov.au/def/agp>
+<http://w3id.org/idn/def/agp>
     a owl:Ontology , prof:Profile ;
     dcterms:provenance "This profile of schema.org, PROV-O, DCAT and others was made within the IDN's ID Catalogue project 2021 - 2022."@en ;
-    owl:versionIRI <http://linked.data.gov.au/def/agp/0.0.1> ;
+    owl:versionIRI <http://w3id.org/idn/def/agp/0.0.1> ;
     owl:versionInfo "0.0.1" ;
     sdo:codeRespository "https://github.com/idn-au/agents-governance-profile/"^^xsd:anyURI ;
     sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
@@ -30,14 +30,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:publisher <https://linked.data.gov.au/org/idn> ;
     prof:hasResource [
         rdfs:label "Specification Document" ;
-        prof:hasArtifact <https://linked.data.gov.au/def/agp/spec> ;
+        prof:hasArtifact <https://w3id.org/idn/def/agp/spec> ;
         dcterms:format "text/html" ;
         prof:hasRole role:specification ;
     ] ,
     [
         rdfs:label "SHACL Validator" ;
         rdfs:comment "A validator that tests data for conformance to the specific requirements of the Agents Governance Profile only and does not test for requirements that Profile inherits from other Profiles or Standards."@en ;
-        prof:hasArtifact <https://linked.data.gov.au/def/agp/validator> ;
+        prof:hasArtifact <https://w3id.org/idn/def/agp/validator> ;
         dcterms:format "text/turtle" ;
         prof:hasRole role:validation ;
     ],
@@ -46,13 +46,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         rdfs:comment """A validator that contains the Agents Governance Profile validator and those of Profiles and Standards that it profiles.
 
 If data is valida according to this Validator, it is also valid according to all the Profiles and Standards that the Agents Governance Profile derives from."""@en ;
-        prof:hasArtifact <https://linked.data.gov.au/def/agp/compounded-validator> ;
+        prof:hasArtifact <https://w3id.org/idn/def/agp/compounded-validator> ;
         dcterms:format "text/turtle" ;
         prof:hasRole role:validation ;
     ],
     [
         rdfs:label "Code Repository" ;
-        prof:hasArtifact <https://linked.data.gov.au/def/agp/repo> ;
+        prof:hasArtifact <https://w3id.org/idn/def/agp/repo> ;
         prof:hasRole role:repository ;
     ] ;
     prof:isProfileOf

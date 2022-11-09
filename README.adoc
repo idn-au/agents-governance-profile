@@ -6,7 +6,7 @@ A profile of several Semantic Web / Knowledge Graph models (ontologies) for the 
 
 The contents of this repository form a "Profile", that is a Standard that constrains and extends other Standards, as described by https://www.w3.org/TR/dx-prof/[The Profiles Vocabulary].
 
-See the https://linked.data.gov.au/def/agp[Profile Declaration] for details of all the profile parts (Resources).
+See the https://w3id.org/idn/def/agp[Profile Declaration] for details of all the profile parts (Resources).
 
 == Licensing & Rights
 

@@ -60,16 +60,16 @@
         <div class="content" id="content" style="grid-column:2; grid-row:2;">
             <h1>Agents Governance Profile - Specification</h1>
             <!-- <h2>Description</h2> -->
-            <div id="description">This is the specification of normative requirements for data conforming to the <a href="https://linked.data.gov.au/def/agp">Agents Governance Profile</a>.</div>
+            <div id="description">This is the specification of normative requirements for data conforming to the <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a>.</div>
             <section id="metadata">
                 <h2>Metadata</h2>
                 <dl>
                     <dt>URI</dt>
-                    <dd><code>https://linked.data.gov.au/def/agp/spec</code> <a href="https://linked.data.gov.au/def/agp/spec" style="font-size:1.5em">&#x2197;</a></dd>
+                    <dd><code>https://w3id.org/idn/def/agp/spec</code> <a href="https://w3id.org/idn/def/agp/spec" style="font-size:1.5em">&#x2197;</a></dd>
                     <dt><a class="proplink" title="sdo:name" href="https://schema.org/name">Name</a></dt>
                     <dd>Agents Governance Profile - Specification</dd>
                     <dt><a class="proplink" title="sdo:isPartOf" href="https://schema.org/isPartOf">Is Part Of</a></dt>
-                    <dd><a href="https://linked.data.gov.au/def/agp">Agents Governance Profile</a></dd>
+                    <dd><a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a></dd>
                     <dt><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></dt>
                     <dd>The specification of normative requirements for data conforming to the Agents Governance Profile.</dd>
                     <dt><a class="proplink" title="sdo:publisher" href="https://schema.org/publisher">Publisher</a>(s)</dt>
@@ -85,7 +85,7 @@
                     <dt><a class="proplink" title="owl#versionInfo" href="http://www.w3.org/2002/07/owl#versionInfo">Version Information</a></dt>
                     <dd>0.0.1</dd>
                     <dt><a class="proplink" title="owl#versionIRI" href="http://www.w3.org/2002/07/owl#versionIRI">Version IRI</a></dt>
-                    <dd><a href="https://linked.data.gov.au/def/agp/spec/0.0.1">https://linked.data.gov.au/def/agp/spec/0.0.1</a></dd>
+                    <dd><a href="https://w3id.org/idn/def/agp/spec/0.0.1">https://w3id.org/idn/def/agp/spec/0.0.1</a></dd>
                     <dt><a class="proplink" title="sdo:license" href="https://schema.org/license">License</a></dt>
                     <dd><a href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International (CC BY 4.0)</a></dd>
                     <dt><a class="proplink" title="sdo:copyrightHolder" href="https://schema.org/copyrightHolder">Copyright Holder</a></dt>
@@ -98,17 +98,17 @@
                 <h2>Preamble <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
                 <section id="abstract">
                     <h3>Abstract <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
-                    <p>This is the specification document of the <a href="https://linked.data.gov.au/def/agp">Agents Governance Profile</a> which is a <a href="https://www.w3.org/TR/dx-prof/#dfn-profile">Profile</a> of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticated Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things), in particular data.</p>
+                    <p>This is the specification document of the <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a> which is a <a href="https://www.w3.org/TR/dx-prof/#dfn-profile">Profile</a> of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticated Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things), in particular data.</p>
                     <p>This document specifies requirements of data that must be met for that data to claim conformance to the Agents Governance Profile. Data that conforms to this profile necessarily conforms to those Profiles and Standards that this Profile extends and constrains.</p>
                     <p>This specification document is <em>not</em> to be used for the automated testing of conformance of RDF data to this profile. That role belongs to the machine-readable <em>validation</em> resources:</p>
                     <ul>
-                        <li><a href="https://linked.data.gov.au/def/agp/validator">SHACL Validator</a></li>
-                        <li><a href="https://linked.data.gov.au/def/agp/validator-compounded">Compounded Validator</a></li>
+                        <li><a href="https://w3id.org/idn/def/agp/validator">SHACL Validator</a></li>
+                        <li><a href="https://w3id.org/idn/def/agp/validator-compounded">Compounded Validator</a></li>
                     </ul>
                     <p>The first validator above contains tests for this profile's requirements only. The second contains this profile's tests as well as those from the other Profiles and Standards that this profile, profiles.</p>
                     <p>For the list of all resources within this profile, see the profile definition:</p>
                     <ul>
-                    <li><a href="https://linked.data.gov.au/def/agp">Agents Governance Profile Definition</a></li>
+                    <li><a href="https://w3id.org/idn/def/agp">Agents Governance Profile Definition</a></li>
                     </ul>
                 </section>
                 <section id="namespaces">
@@ -116,7 +116,7 @@
                     <p>This document refers to elements of various ontologies by short codes using namespace prefixes. The prefixes and their corresponding namespaces' URIs are:</p>
                     <dl>
                         <dt>agp</dt>
-                        <dd><code>https://linked.data.gov.au/def/agp</code></dd>
+                        <dd><code>https://w3id.org/idn/def/agp</code></dd>
                         <dt>dcat</dt>
                         <dd><code>http://www.w3.org/ns/dcat#</code></dd>
                         <dt>dcterms</dt>
@@ -147,7 +147,7 @@
             </section>
             <section id="intro">
                 <h2>1. Introduction <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-                <p>The <a href="https://linked.data.gov.au/def/agp">Agents Governance Profile</a> is a Profile of several well-known ontologies that represent Agents - People and Organisations - and their relationships to Entities - things. This document, the profile's <em>Specification</em> defines the rules for modelling Agent &rarr; Agent &amp; Agent &rarr; Entity relations.</p>
+                <p>The <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a> is a Profile of several well-known ontologies that represent Agents - People and Organisations - and their relationships to Entities - things. This document, the profile's <em>Specification</em> defines the rules for modelling Agent &rarr; Agent &amp; Agent &rarr; Entity relations.</p>
                 <h4>1.1 Modelling elements</h4>
                 <p>Informally, the main modelling elements within this Specification are show in the figure below.</p>
                 <div id="fig-overview" class="figure">
@@ -169,8 +169,8 @@
                     <img src="img/Intro-EG2.png" alt="Intro Example 2" style="width:600px;" />
                     <p class="caption"><strong>Figure Intro 2:</strong> A formal OWL/RDF diagram using the elements given in <a href="#fig-key">Figure Key</a> showing the Agent/Agent and Entity/Entity relations of <a href="#fig-intro-eg-1">Figure Intro 1</a></p>
                 </div>
-                <p>The pattern of relationships in <a href="#fig-intro-eg-2">Figure Intro 2</a> above using Blank Nodes is describe next.</p>
-                <h4>1.2 Qualified Relations Pattern</h4>
+                <p>The pattern of relationships in <a href="#fig-intro-eg-2">Figure Intro 2</a> above using Blank Nodes is described next.</p>
+                <h4 id="qualified-relations-pattern">1.2 Qualified Relations Pattern</h4>
                 <p>The Agent &rarr; Entity &amp; Agent &rarr; Agent relations modelled by this Specification are done so using the <em>qualified relations</em> pattern  which is described for RDF modelling in the <a href="https://patterns.dataincubator.org/book/qualified-relation.html"><em>Linked Data Patterns</em> online textbook</a> but which are summarised like this:</p>
                 <div class="figure">
                     <img src="img/Qualified.png" alt="Intro Example" style="width:650px;" />
@@ -178,16 +178,17 @@
                 </div>
                 <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalogue Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
                 <h4>1.3 Use of vocabularies</h4>
-                <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Agent &rarr; Entity) and this Profile's own <a href=""><em>Agent Delegations Role Codes</em> vocabulary</a> (for Agent &rarr; Agent). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
+                <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Agent &rarr; Entity roles). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
                 <h4>1.4 Origins of this Profile</h4>
-                <p>This Profile's relationships are general in nature - they can be used for many purposes - however the specific motivation for this work was to represent indigenous peoples' relationships, or lack of them, to data by or about them. For this reason, the <a href="https://idnau.org">Indigenous Data Network</a>, the publisher of this Profile, uses an extended form of the ISO <em>Role Codes</em> vocabulary:</p>
-                <ul>
-                    <li><a href="https://linked.data.gov.au/def/idn-role-codes">IDN Role Codes</a></li>
-                </ul>
+                <p>This Profile's relationships are general in nature - they can be used for many purposes - however the specific motivation for this work was to represent indigenous peoples' relationships to data.</p>
+                <p>Recognising the generic nature of this Profile, the <a href="https://idnau.org">Indigenous Data Network</a>, the publisher of this Profile, is very happy to consider updates to this Profile that others, including non-Australian indigenous groups, propose.</p>
+                <p>Of primary concern for Australian indigenous peoples is data <em>about</em> them, so the IDN has extended the ISO <em>Role Codes</em> vocabulary to contain <em>subject agent</em> and <em>subject agent representative</em> roles in defined in their <a href="https://w3id.org/idn/def/idn-role-codes">IDN Role Codes</a> vocabulary. These roles are also likely of general interest.</p>
                 <h4>Structure of this Specification</h4>
-                <p>The <a href="#requirements"><em>Requirements</em></a> section following this one defines the individual modelling patterns and element values that must be used by data wishing to conform to this Profile. </p>
-                <p>Following that, the <a href="#example"><em>Example</em></a> section gives a data example implementing all the individual requirements.</p>
-                <p>Finally, the <a href="#mappings"><em>Mappings</em></a> annex provides mapping from some of the elements and patterns described here to other modelling systems.</p>
+                <ul>
+                    <li>The <a href="#requirements"><em>Requirements</em></a> section following this one defines the individual modelling patterns and element values that must be used by data wishing to conform to this Profile. </li>
+                    <li>Following that, the <a href="#example"><em>Example</em></a> section gives a data example implementing all the individual requirements.</li>
+                    <li>Finally, the <a href="#mappings"><em>Mappings</em></a> annex provides mapping from some of the elements and patterns described here to other modelling systems.</li>
+                </ul>
             </section>
             <section id="requirements">
                 <h2>2. Requirements <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
@@ -199,35 +200,35 @@
                 <section id="structural">
                     <h3>2.1 Structural Requirements</h3>
                     <h4>2.1.1 Agent &rarr; Agent Relations</h4>
-                    <h4>2.1.2 Agent &rarr; Entity Relations</h4>
-                        <p class="req"><strong>Req C2:</strong> Each <code>Catalog</code> instance MUST contain at least one <code>Resource</code> indicated by the <code>hasPart</code> property.</p>
-                        <p class="eg">
-                            <span>Example: A Catalogue instance with minimum required metadata</span>
-&lt;https://doi.org/a-doi-for-the-catalogue&gt;
-    a dcat:Catalog ;
-
-    dcterms:title "Catalogue X" ;
-    dcterms:description "An example catalogue"@en ;
-    dcterms:created "2022-07-21"^^xsd:date ;
-    dcterms:modified "2022-07-25T20:15:21"^^xsd:dateTime ;
-
-    prov:qualifiedAttribution [
-        a prov:Attribution;
-        prov:agent &lt;https://linked.data.gov.au/org/idn&gt; ;  # Indigenous Data Network's PID
-        ex:hadRole :custodian ;
-    ] ,
-    [
-        a prov:Attribution;
-        prov:agent &lt;https://orcid.org/0000-0002-8742-7730&gt; ;  # Nicholas Car's IRI
-        ex:hadRole :pointOfContact ;
+                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code> indicating a <code>dcat:Relationship</code> object with the <code>dcat:relation</code> property which, in turn, indicates the second <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
+                    <p>Figure AA1 EG Relations below gives the general pattern and a specific example of data conforming to Req AA1.</p>
+                <div id="fig-aa1-eg" class="figure">
+                    <a href="img/AA1-EG.png"><img src="img/AA1-EG.png" alt="Figure AA1 EG" style="width:600px;" /></a>
+                    <p class="caption"><strong>Figure AA1 EG:</strong> A. The general <em>Qualified Relations Pattern</em> to be followed for <code>Agent</code>/<code>Agent</code> relations. B. A figure of the data in Example AA1 below.</p>
+                </div>
+                    <p class="eg">
+                        <span>Example AA1: Person X is shown related to Organisation Y using the Qualified Relations Pattern</span>
+&lt;http://example.com/agent/person-x&gt;
+    a sdo:Person ;
+    sdo:name "Person X" ;
+    dcat:relation [
+        a dcat:Relationship ;
+        prov:agent &lt;http://example.com/agent/organisation-y&gt; ;
+        dcat:hadRole &lt;http://example.com/agent-relations/memberOf&gt;
     ] ;
+.
 
-    dcterms:hasPart
-        ex:some-resource-y ,
-        ex:some-resource-z ,
-        ...
-    .
-                        </p>
+&lt;http://example.com/agent/organisation-y&gt;
+    a sdo:Organization ;
+    sdo:name "Organisation Y" ;
+.
+
+&lt;http://example.com/agent-relations/memberOf&gt;
+    a skos:Concept ;
+    skos:prefLabel "Member Of"@en ;
+.
+                    </p>
+                    <h4>2.1.2 Agent &rarr; Entity Relations</h4>
                 </section>
                 <section id="values">
                     <h3>2.2 Values Requirements</h3>
@@ -236,111 +237,16 @@
             <section id="example">
                 <h2>3. Extended Example <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
                 <p>Snippet examples for many of the Requirements of this Specification are given in the individual Requirements' sections. This section contains a single, larger, example that implements all the Requirements.</p>
-                <p>This example is valid according to this Profile's <a href="https://linked.data.gov.au/def/agp/validator">SHACL Validator</a> &amp; <a href="https://linked.data.gov.au/def/agp/validator-compounded">Compounded Validator</a>.</p>
+                <p>This example is valid according to this Profile's <a href="https://w3id.org/idn/def/agp/validator">SHACL Validator</a> &amp; <a href="https://w3id.org/idn/def/agp/validator-compounded">Compounded Validator</a>.</p>
                 <p class="eg">
-                    <span>Example: Partial content of the IDN Dataset Catalogue</span>
-PREFIX dcat: &lt;http://www.w3.org/ns/dcat#&gt;
-PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
-PREFIX idnth: &lt;https://linked.data.gov.au/def/idn-data-themes/&gt;
-PREFIX idnroles: &lt;https://linked.data.gov.au/def/idn-role-codes/&gt;
-PREFIX isoroles: &lt;http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/&gt;
-PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
-PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
-PREFIX sdo: &lt;https://schema.org/&gt;
-PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
-PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
-
-&lt;http://linked.data.gov.au/dataset/idndc&gt;
-    a dcat:Catalog ;
-        dcterms:title "IDC Dataset Catalogue" ;
-        dcterms:description """The Indigenous Data Network's catalogue of datasets. This catalogue contains records of datasets in Australia, most of which have some relation to indigenous Australia.
-
-The purpose of this catalogue is not to act as a master catalogue of indigenous data in Australia to demonstrate improved metadata models and rating systems for data and metadata in order to improve indigenous data governance.
-
-The content of this catalogue conforms to the Indigenous Data Network's Catalogue Profile which is a profile of the DCAT, SKOS and PROV data models."""@en ;
-        dcterms:created "2022-07-31"^^xsd:date ;
-        dcterms:modified "2022-07-31"^^xsd:date ;
-        prov:qualifiedAttribution [
-            a prov:Attribution;
-            prov:agent &lt;https://linked.data.gov.au/org/idn&gt; ;
-            dcat:hadRole isoroles:author , isoroles:owner , isoroles:custodian ;
-        ] ;
-        dcterms:hasPart
-            &lt;http://example.com/resource/x&gt; ;
-.
-
-&lt;http://example.com/resource/x&gt;
-    a dcat:Dataset ;
-    dcterms:title "Example Dataset 1" ;
-    dcterms:description "This example dataset has a minimalist metadata record that is valid according to the Indigenous Data Network's Catalogue Profile"@en ;
-    dcterms:created "2022-07-31"^^xsd:date ;
-    dcterms:modified "2022-07-31"^^xsd:date ;
-    dcat:theme idnth:indigenous-demographics ;
-    prov:qualifiedAttribution [
-        a prov:Attribution ;
-        prov:agent &lt;https://orcid.org/0000-0002-8742-7730&gt; ;
-        dcat:hadRole isoroles:author ;  # not being a real dataset, it has no roles other than 'author' for Agents associated with it
-    ] ;
-.
-
-# From the IDN Agents Catalogue
-&lt;https://linked.data.gov.au/org/idn&gt;
-    a sdo:Organization ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:description "The IDN is within the University of Melbourne. It was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
-    sdo:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
-.
-
-# From the IDN Agents Catalogue
-&lt;https://orcid.org/0000-0002-8742-7730&gt;
-    a sdo:Person ;
-    sdo:name "Nicholas J. Car"@en ;
-    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
-    sdo:affiliation &lt;https://kurrawong.net&gt; ;
-.
-&lt;https://kurrawong.net&gt;
-    a sdo:Organization ;
-    sdo:name "Kurrawong AI" ;
-    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
-    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
-.
-
-# From the IDN Data Themes Vocabulary
-idnth:indigenous-demographics
-    a skos:Concept ;
-    skos:prefLabel "Indigenous Demographics"@en ;
-    skos:definition "Concerned with the demographics of indigenous people in Australia"@en ;
-    skos:inScheme &lt;https://linked.data.gov.au/def/idn-data-themes&gt; ;
-.
-
-# From the IDN Role Codes Vocabulary
-isoroles:author
-    a skos:Concept ;
-    skos:prefLabel "Author"@en ;
-    skos:definition "party who authored the resource"@en ;
-    skos:inScheme &lt;https://linked.data.gov.au/def/idn-role-codes&gt; ;
-.
-isoroles:owner
-    a skos:Concept ;
-    skos:prefLabel "Owner"@en ;
-    skos:definition "party that owns the resource"@en ;
-    skos:inScheme &lt;https://linked.data.gov.au/def/idn-role-codes&gt; ;
-.
-isoroles:custodian
-    a skos:Concept ;
-    skos:prefLabel "Custodian"@en ;
-    skos:definition "party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource"@en ;
-    skos:inScheme &lt;https://linked.data.gov.au/def/idn-role-codes&gt; ;
-.
-                </p>
-                <p>The content for the example above can be accessed online from the IDN Dataset Catalogue's content repository:</p>
-                <ul>
-                    <li><a href="https://github.com/idn-au/catalogue-data">Agents Governance Data</a></li>
-                </ul>
+                            <span>Example: A ...</span>
+...
+                        </p>
+                <p>The content for the example above can be accessed online from the <a href="https://w3id.org/dataset/agents">IDN's Agents Catalogue</a>.</p>
             </section>
             <section id="annex-a">
                 <h2>Annex A. Mappings<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-                <p>This Annex defines mappings between this Profile and assessment models.</p>
+                <p>This Annex defines mappings between this Profile and other Agent modelling systems.</p>
                 <section id="sdo-mapping">
                     <h4>A.1. schema.org Direct Property Mapping<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h4>
                     <p><em>TODO</em></p>
