@@ -35,7 +35,14 @@
                     </ul>
                 </li>
                 <li><a href="#example">3. Examples</a></li>
-                <li><a href="#mappings">A: Mappings</a></li>
+                <li>
+                    <a href="#vocabularies">A: Vocabularies</a>
+                    <ul>
+                        <li><a href="#agent-agent-roles">A.1. Agent/Agent Roles</a></li>
+                        <li><a href="#entity-agent-roles">A.2. Entity/Agent Roles</a></li>
+                    </ul>
+                </li>
+                <li><a href="#mappings">B: Mappings</a></li>
                 <li><a href="#references">References</a></li>
             </ul>
         </div>
@@ -52,7 +59,6 @@
         <div class="content" style="grid-column:1; grid-row:2;"></div>
         <div class="content" id="content" style="grid-column:2; grid-row:2;">
             <h1>Agents Governance Profile - Specification</h1>
-            <!-- <h2>Description</h2> -->
             <div id="description">This is the specification of normative requirements for data conforming to the <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a>.</div>
             <section id="metadata">
                 <h2>Metadata</h2>
@@ -72,7 +78,7 @@
                     <dt><a class="proplink" title="sdo:created" href="https://schema.org/created">Created</a></dt>
                     <dd>2022-11-01</dd>
                     <dt><a class="proplink" title="sdo:dateModified" href="https://schema.org/dateModified">Modified</a></dt>
-                    <dd>2022-11-07</dd>
+                    <dd>2022-11-14</dd>
                     <dt><a class="proplink" title="sdo:dateIssued" href="https://schema.org/dateIssued">Issued</a></dt>
                     <dd>0000-00-00</dd>
                     <dt><a class="proplink" title="owl#versionInfo" href="http://www.w3.org/2002/07/owl#versionInfo">Version Information</a></dt>
@@ -108,8 +114,10 @@
                     <h3>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
                     <p>This document refers to elements of various ontologies by short codes using namespace prefixes. The prefixes and their corresponding namespaces' URIs are:</p>
                     <dl>
+                        <dt>aarr</dt>
+                        <dd><code>https://w3id.org/idn/def/aarr/</code></dd>
                         <dt>agp</dt>
-                        <dd><code>https://w3id.org/idn/def/agp</code></dd>
+                        <dd><code>https://w3id.org/idn/def/agp/</code></dd>
                         <dt>dcat</dt>
                         <dd><code>http://www.w3.org/ns/dcat#</code></dd>
                         <dt>dcterms</dt>
@@ -256,8 +264,41 @@
                         </p>
                 <p>The content for the example above can be accessed online from the <a href="https://w3id.org/dataset/agents">IDN's Agents Catalogue</a>.</p>
             </section>
+            <section id="vocabularies">
+                <h2>Annex A. Vocabularies<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+                <p>This Annex lists vocabularies relied on by this Profile: both those developed specifically for this Profile and others.</p>
+                <section id="agent-agent-roles">
+                    <h3>A.1. Agent to Agent Relations Roles Vocabulary<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
+                    <p>The Agent to Agent Relations Roles Vocabulary (AARR) was developed as part of this profile. It is online in authoritative form at:</p>
+                    <ul>
+                        <li><a href="https://w3id.org/idn/def/aarr">https://w3id.org/idn/def/aarr</a></li>
+                    </ul>
+                    <p>This vocabulary contains roles for relationships between Organisations, Persons and Persons & Organisations and is used in the <a href="#agent-agent">Agent / Agent</a> qualified relations pattern.</p>
+                    <p>Some of the roles are:</p>
+                    <ul>
+                        <li><a href="https://w3id.org/idn/def/aarr/Member">Member</a>: Person &rarr; Organisation</li>
+                        <li><a href="https://w3id.org/idn/def/aarr/PartOf">Part Of</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://w3id.org/idn/def/aarr/DescendantOrganisation">Descendant Organisation</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://w3id.org/idn/def/aarr/Proxy">Proxy</a>: Person &rarr; Person</li>
+                    </ul>
+                </section>
+                <section id="entity-agent-roles">
+                    <h3>A.2. Entity to Agent Relations Roles Vocabulary<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
+                    <p>The Entity to Agent Relations Roles Vocabulary suggested for use with this profile is the:</p>
+                    <ul>
+                        <li><a href="https://w3id.org/idn/def/idn-role-codes">IDN Role Codes</a></li>
+                    </ul>
+                    <p>This vocabulary contains roles for relationships between Entities (things) and Agents (People &amp; Organisations) and is used in the <a href="#agent-entity">Entity / Agent</a> qualified relations pattern.</p>
+                    <p>Some of the roles are:</p>
+                    <ul>
+                        <li><a href="http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian">Custodian</a>: Person &rarr; Organisation</li>
+                        <li><a href="http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/rightsHolder">Rights Holder</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://w3id.org/idn/def/idn-role-codes/subjectAgentRepresentatitve">subjectAgentRepresentatitve</a>: Organisation &rarr; Organisation</li>
+                    </ul>
+                </section>
+            </section>
             <section id="mappings">
-                <h2>Annex A. Mappings<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+                <h2>Annex B. Mappings<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
                 <p>This Annex defines mappings between this Profile and other Agent modelling systems.</p>
                 <p>For systems that are mapped to that have direct Agent / Agent or Entity / Agent relations properties, such as schema.org's <code><a href="https://schema.org/memberOf">memberOf</a></code> property (agent / Agent) and Dublin Core's <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">publisher</a></code> (Entity / Agent), if a role vocabulary term can be found that exactly or perhaps closely matches the role included within the direct property, a mapping equivalence can be made pas per the Figure Mapping Plan below.</p>
                 <div id="fig-mapping-plan" class="figure">
@@ -265,41 +306,87 @@
                     <p class="caption"><strong>Figure Mapping Plan:</strong> Mapping the qualified Agent/Agent relations to direct properties. A. Qualified form; B. Equating a direct property to a qualified relation with a comparable role; C. Some schema.org mapped properties</p>
                 </div>
                 <section id="sdo-mapping">
-                    <h4>A.1. schema.org Direct Property Mapping<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h4>
+                    <h3>B.1. schema.org Direct Property Mapping<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
                     <div style="text-align:center;">
                         <table class="properties" style="width:75%; margin: 0 auto;">
                             <tr>
                                 <th>schema.org property</th>
-                                <th>Domain / Range</th>
+                                <th>Domain / Range<br /><span style="font-size:smaller;">E: Entity, A: Agent</span></th>
                                 <th>AGP elements</th>
                                 <th>Notes</th>
                             </tr>
                             <tr>
                                 <td><code>sdo:memberOf</code></td>
-                                <td>Agent (X) / Agent (Y)</td>
+                                <td>A (X) / A (Y)</td>
                                 <td>
                                     <pre>
 &lt;X&gt;
     dcat:relation [
-        dcat:hadRole ex:MemberOf ;
+        dcat:hadRole aarr:memberOf ;
         prov:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
                                 </td>
-                                <td><code>ex:MemberOf</code> example vocab term to be replaced by an AGP-supplied term</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td><code>sdo:member</code></td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td>A (X) / A (Y)</td>
+                                <td><pre>
+&lt;X&gt;
+    dcat:relation [
+        dcat:hadRole aarr:member ;
+        prov:agent &lt;Y&gt;
+    ] ;
+.
+                                </pre></td>
                                 <td>Inverse of <code>sdo:memberOf</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>sdo:affiliation</code></td>
+                                <td>A (X) / A (Y)</td>
+                                <td><pre>
+&lt;X&gt;
+    dcat:relation [
+        dcat:hadRole aarr:affiliateOf ;
+        prov:agent &lt;Y&gt;
+    ] ;
+.
+                                </pre></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>sdo:subOrganization</code></td>
+                                <td>A (X) / A (Y)</td>
+                                <td><pre>
+&lt;X&gt;
+    dcat:relation [
+        dcat:hadRole aarr:part ;
+        prov:agent &lt;Y&gt;
+    ] ;
+.
+                                </pre></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>sdo:parentOrganization</code></td>
+                                <td>A (X) / A (Y)</td>
+                                <td><pre>
+&lt;X&gt;
+    dcat:relation [
+        dcat:hadRole aarr:partOf ;
+        prov:agent &lt;Y&gt;
+    ] ;
+.
+                                </pre></td>
+                                <td></td>
                             </tr>
                         </table>
                     </div>
                 </section>
                 <section id="dcterms-mapping">
-                    <h4>A.2. Dublin Core Terms Direct Property Mapping<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h4>
+                    <h3>B.2. Dublin Core Terms Direct Property Mapping<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
                     <table class="properties" style="width:75%; margin: 0 auto;">
                             <tr>
                                 <th>Dublin Core Terms property</th>
@@ -309,7 +396,7 @@
                             </tr>
                             <tr>
                                 <td><code>dcterms:creator</code></td>
-                                <td>Entity (X) / Agent (Y)</td>
+                                <td>E (X) / A (Y)</td>
                                 <td>
                                     <pre>
 &lt;X&gt;
@@ -324,7 +411,7 @@
                             </tr>
                             <tr>
                                 <td><code>dcterms:contributor</code></td>
-                                <td>Entity (X) / Agent (Y)</td>
+                                <td>E (X) / A (Y)</td>
                                 <td>
                                     <pre>
 &lt;X&gt;
@@ -339,12 +426,42 @@
                             </tr>
                             <tr>
                                 <td><code>dcterms:publisher</code></td>
-                                <td>Entity (X) / Agent (Y)</td>
+                                <td>E (X) / A (Y)</td>
                                 <td>
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
         dcat:hadRole isorole:publisher ;
+        prov:agent &lt;Y&gt;
+    ] ;
+.
+                                    </pre>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>dcterms:mediator</code></td>
+                                <td>E (X) / A (Y)</td>
+                                <td>
+                                    <pre>
+&lt;X&gt;
+    prov:qualifiedAttribution [
+        dcat:hadRole isorole:distributor ;
+        prov:agent &lt;Y&gt;
+    ] ;
+.
+                                    </pre>
+                                </td>
+                                <td>Needs verification</td>
+                            </tr>
+                            <tr>
+                                <td><code>dcterms:rightsHolder</code></td>
+                                <td>E (X) / A (Y)</td>
+                                <td>
+                                    <pre>
+&lt;X&gt;
+    prov:qualifiedAttribution [
+        dcat:hadRole isorole:rightsHolder ;
         prov:agent &lt;Y&gt;
     ] ;
 .
