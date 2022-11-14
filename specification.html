@@ -25,13 +25,8 @@
                 <li>
                     <a href="#requirements">2. Requirements</a>
                     <ul>
-                        <!-- <li><a href="#catalogue">2.1 Catalogue</a></li>
-                        <li><a href="#resource">2.2 Resource</a></li>
-                        <li><a href="#dataset">2.3 Dataset</a></li>
-                        <li><a href="#attribution">2.4 Attribution</a></li>
-                        <li><a href="#agent">2.5 Agent</a></li>
-                        <li><a href="#concept">2.6 Concept</a></li>
-                        <li><a href="#conceptscheme">2.7 Concept Scheme</a></li> -->
+                        <li><a href="#agent-agent">2.1. Agent/Agent Roles</a></li>
+                        <li><a href="#entity-agent">2.2. Entity/Agent Roles</a></li>
                     </ul>
                 </li>
                 <li><a href="#example">3. Examples</a></li>
@@ -167,7 +162,7 @@
             </section>
             <section id="intro">
                 <h2>1. Introduction <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-                <p>The <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a> is a Profile of several well-known ontologies that represent Agents - People and Organisations - and their relationships to Entities - things. This document, the profile's <em>Specification</em> defines the rules for modelling Agent &rarr; Agent &amp; Agent &rarr; Entity relations.</p>
+                <p>The <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a> is a Profile of several well-known ontologies that represent Agents - People and Organisations - and their relationships to Entities - things. This document, the profile's <em>Specification</em> defines the rules for modelling Agent &rarr; Agent &amp; Entity &rarr; Agent relations.</p>
                 <h4>1.1 Modelling elements</h4>
                 <p>Informally, the main modelling elements within this Specification are show in the figure below.</p>
                 <div id="fig-overview" class="figure">
@@ -191,14 +186,14 @@
                 </div>
                 <p>The pattern of relationships in <a href="#fig-intro-eg-2">Figure Intro 2</a> above using Blank Nodes is described next.</p>
                 <h4 id="qualified-relations-pattern">1.2 Qualified Relations Pattern</h4>
-                <p>The Agent &rarr; Entity &amp; Agent &rarr; Agent relations modelled by this Specification are done so using the <em>qualified relations</em> pattern  which is described for RDF modelling in the <a href="https://patterns.dataincubator.org/book/qualified-relation.html"><em>Linked Data Patterns</em> online textbook</a> but which are summarised like this:</p>
+                <p>The Entity &rarr; Agent &amp; Agent &rarr; Agent relations modelled by this Specification are done so using the <em>qualified relations</em> pattern  which is described for RDF modelling in the <a href="https://patterns.dataincubator.org/book/qualified-relation.html"><em>Linked Data Patterns</em> online textbook</a> but which are summarised like this:</p>
                 <div class="figure">
                     <img src="img/Qualified.png" alt="Intro Example" style="width:650px;" />
                     <p class="caption"><strong>Figure Qualified:</strong> Where Resource A has a relation to Resource B and that relation is described by a role, Resource C, a pattern that interjects an anonymous node (a <code>Blank Node</code>) between A &amp; B can be made that links them via a relationship to C. This figure shows Resource A linked to an anonymous node, [ ], by property x which then links to the target Resource B and the qualifying Resource C.</p>
                 </div>
                 <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalogue Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
                 <h4>1.3 Use of vocabularies</h4>
-                <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Agent &rarr; Entity roles). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
+                <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Entity &rarr; Agent roles). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
                 <h4>1.4 Origins of this Profile</h4>
                 <p>This Profile's relationships are general in nature - they can be used for many purposes - however the specific motivation for this work was to represent indigenous peoples' relationships to data.</p>
                 <p>Recognising the generic nature of this Profile, the <a href="https://idnau.org">Indigenous Data Network</a>, the publisher of this Profile, is very happy to consider updates to this Profile that others, including non-Australian indigenous groups, propose.</p>
@@ -215,15 +210,15 @@
                 <p>The requirements for data to conform to this profile are listed here. They are organised into the following subsections:</p>
                 <ul>
                     <li><strong>Agent &rarr; Agent Relations</strong> - indicating how <code>Agent</code>s relate to other <code>Agent</code>s</li>
-                    <li><strong>Agent &rarr; Entity Relations</strong> - indicating how <code>Agent</code>s relate to <code>Entity</code>s</li>
+                    <li><strong>Entity &rarr; Agent Relations</strong> - indicating how <code>Agent</code>s relate to <code>Entity</code>s</li>
                 </ul>
                 <section id="agent-agent">
                     <h3>2.1 Agent &rarr; Agent Relations</h3>
                     <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code> indicating a <code>dcat:Relationship</code> object with the <code>dcat:relation</code> property which, in turn, indicates the second <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
-                    <p>Figure AA1 EG Relations below gives the general pattern and a specific example of data conforming to Req AA1.</p>
-                    <div id="fig-aa1-eg" class="figure">
-                    <a href="img/AA1-EG.png"><img src="img/AA1-EG.png" alt="Figure AA1 EG" style="width:600px;" /></a>
-                    <p class="caption"><strong>Figure AA1 EG:</strong> A. The general <em>Qualified Relations Pattern</em> to be followed for <code>Agent</code>/<code>Agent</code> relations. B. A figure of the data in Example AA1 below.</p>
+                    <p>Figure AA1 below gives the general pattern and a specific example of data conforming to Req AA1.</p>
+                    <div id="fig-aa1" class="figure">
+                    <a href="img/AA1.png"><img src="img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
+                    <p class="caption"><strong>Figure AA1:</strong> A. The general <em>Qualified Relations Pattern</em> to be followed for <code>Agent</code>/<code>Agent</code> relations. B. A figure of the data in Example AA1 below.</p>
                 </div>
                     <p class="eg">
                         <span>Example AA1: Person X is shown related to Organisation Y using the Qualified Relations Pattern</span>
@@ -233,7 +228,7 @@
     dcat:relation [
         a dcat:Relationship ;
         prov:agent &lt;http://example.com/agent/organisation-y&gt; ;
-        dcat:hadRole &lt;http://example.com/agent-relations/memberOf&gt;
+        dcat:hadRole aarr:memberOf ;
     ] ;
 .
 
@@ -247,11 +242,39 @@
     skos:prefLabel "Member Of"@en ;
 .
                     </p>
-                    <p class="req"><strong>Req AA2:</strong> The role of <code>Agent</code> / <code>Agent</code> relations SHOULD be indicated with terms from the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> or vocabularies extending it.</p>
+                    <p class="req"><strong>Req AA2:</strong> The role of <code>Agent</code> / <code>Agent</code> relations SHOULD be indicated with terms from this profile's <a href="http://idn.kurrawong.net/vocab/aarr">Agent to Agent Relations Roles vocabulary</a> or vocabularies extending it.</p>
                 </section>
-                <section id="agent-entity">
-                    <h3>2.1.2 Agent &rarr; Entity Relations</h3>
+                <section id="entity-agent">
+                    <h3>2.1.2 Entity &rarr; Agent Relations</h3>
+                    <p class="req"><strong>Req EA1:</strong> Relationships between <code>Entity</code> instances and <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the <code>Entity</code> indicating a <code>prov:Attribution</code> object with the <code>prov:qualifiedAttribution</code> property which, in turn, indicates the <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
+                    <p>Figure EA1 below gives the general pattern and a specific example of data conforming to Req EA1.</p>
+                    <div id="fig-ea1" class="figure">
+                    <a href="img/EA1.png"><img src="img/EA1.png" alt="Figure EA1" style="width:600px;" /></a>
+                        <p class="caption"><strong>Figure EA1:</strong> A. The general <em>Qualified Relations Pattern</em> to be followed for <code>Entity</code>/<code>Agent</code> relations. B. An example of an E/A relation for the <a href="https://linked.data.gov.au/dataset/asgsed3/ILOC">Indigenous Locations Dataset</a> as per the example EA1 below.</p>
+                </div>
+                    <p class="eg">
+                        <span>Example EA1: Indigenous Locations Dataset, an Entity, is shown related to the Australian Bureau of Statistics, an Organisation, using the  Qualified Relations Pattern</span>
+&lt;https://linked.data.gov.au/dataset/asgsed3/ILOC&gt;
+    a dcat:Dataset ;
+    sdo:name "Indigenous Locations Dataset" ;
+    prov:qualifiedAttribution [
+        a prov:Attribution ;
+        prov:agent &lt;https://linked.data.gov.au/org/abs&gt; ;
+        dcat:hadRole isorole:custodian ;
+    ] ;
+.
 
+&lt;https://linked.data.gov.au/org/abs&gt;
+    a sdo:Organization ;
+    sdo:name "Australian Bureau of Statistics" ;
+.
+
+isorole:custodian;
+    a skos:Concept ;
+    skos:prefLabel "Custodian"@en ;
+.
+                    </p>
+                    <p class="req"><strong>Req EA2:</strong> The role of <code>Entity</code> / <code>Agent</code> relations SHOULD be indicated with terms from the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> or vocabularies extending it.</p>
                 </section>
             </section>
             <section id="example">
@@ -288,7 +311,7 @@
                     <ul>
                         <li><a href="https://w3id.org/idn/def/idn-role-codes">IDN Role Codes</a></li>
                     </ul>
-                    <p>This vocabulary contains roles for relationships between Entities (things) and Agents (People &amp; Organisations) and is used in the <a href="#agent-entity">Entity / Agent</a> qualified relations pattern.</p>
+                    <p>This vocabulary contains roles for relationships between Entities (things) and Agents (People &amp; Organisations) and is used in the <a href="#entity-agent">Entity / Agent</a> qualified relations pattern.</p>
                     <p>Some of the roles are:</p>
                     <ul>
                         <li><a href="http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian">Custodian</a>: Person &rarr; Organisation</li>
