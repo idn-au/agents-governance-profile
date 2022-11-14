@@ -51,6 +51,11 @@ If data is valida according to this Validator, it is also valid according to all
         prof:hasRole role:validation ;
     ],
     [
+        rdfs:label "Agents to Agent Relationship Roles Vocabulary" ;
+        prof:hasArtifact <https://w3id.org/idn/def/aarr> ;
+        prof:hasRole role:vocabulary ;
+    ] ,
+    [
         rdfs:label "Code Repository" ;
         prof:hasArtifact <https://w3id.org/idn/def/agp/repo> ;
         prof:hasRole role:repository ;

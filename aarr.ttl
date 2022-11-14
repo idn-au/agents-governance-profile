@@ -21,7 +21,7 @@ cs:
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
     owl:versionIRI :0.0.1 ;
     owl:versionInfo "0.0.1" ;
-    skos:definition "Provides a vocabulary of roles that exist between Agents, that is Persons and Organisations"@en ;
+    skos:definition "A vocabulary of roles that exist between Agents, that is Persons and Organisations"@en ;
     skos:hasTopConcept
         :affiliate ,
         :affiliateOf ,
