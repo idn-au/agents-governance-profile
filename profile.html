@@ -69,128 +69,66 @@
         </section>
         <section id="resource-descriptors">
             <h2>Resource Descriptors <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-            <div class="entity resource-descriptor" id="https://w3id.org/idn/def/agp/spec">
-              <h3>Specification Document</h3>
-              <table class="metadata">
-                  <tr>
+            <table class="properties">
+                <tr>
+                    <th><a class="proplink" title="sdo:name" href="https://schema.org/name">Name</a></th>
                     <th><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></th>
-                    <td>The normative, human-readable, listing of profile requirements</td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasArtifact" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-                    <td><a href="https://w3id.org/idn/def/agp/spec">https://w3id.org/idn/def/agp/spec</a></td>
-                  </tr>
-                  <tr>
+                    <th><a class="proplink" title="prof:hasArtifact" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Location</a></th>
                     <th><a class="proplink" title="prof:hasRole" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-                    <td><a href="http://www.w3.org/ns/dx/prof/role/specification">specification</a></td>
-                  </tr>
-                  <tr>
                     <th><a class="proplink" title="dcterms:conformsTo" href="http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+                    <th><a class="proplink" title="dcterms:format" href="http://purl.org/dc/terms/format">Format</a></th>
+                </tr>
+                <!--
+                <tr>
+                    <td id="https://w3id.org/idn/def/agp/guide">Guidance Document</td>
+                    <td>A how-to-guide for creating metadata according to this Profile</td>
+                    <td><a href="https://w3id.org/idn/def/agp/guide">https://w3id.org/idn/def/agp/guide</a></td>
+                    <td><a href="http://www.w3.org/ns/dx/prof/role/guidance">guidance</a></td>
                     <td><a href="https://www.w3.org/TR/html52/">HTML 5</a></td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="dcterms:format" href="http://purl.org/dc/terms/format">Format</a></th>
                     <td>text/html</td>
-                  </tr>
-              </table>
-            </div>
-            <div class="entity resource-descriptor" id="https://w3id.org/idn/def/agp/validator">
-              <h3>Validator in SHACL</h3>
-              <table class="metadata">
-                  <tr>
-                    <th><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></th>
-                    <td>A validator that tests data for conformance to the specific requirements of the Agents Governance Profile only and does not test for requirements that Profile inherits from other Profiles or Standards.</td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasArtifact" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+                </tr>
+                -->
+                <tr>
+                    <td id="https://w3id.org/idn/def/agp/spec">Specification Document</td>
+                    <td>The normative, human-readable, listing of profile requirements</td>
+                    <td><a href="https://w3id.org/idn/def/agp/spec">https://w3id.org/idn/def/agp/spec</a></td>
+                    <td><a href="http://www.w3.org/ns/dx/prof/role/specification">specification</a></td>
+                    <td><a href="https://www.w3.org/TR/html52/">HTML 5</a></td>
+                    <td>text/html</td>
+                </tr>
+                <tr>
+                    <td id="https://w3id.org/idn/def/agp/validator">Validator in SHACL</td>
+                    <td>A SHACL Shapes file to be used to test the conformance of RDF data to this profile</td>
                     <td><a href="https://w3id.org/idn/def/agp/validator">https://w3id.org/idn/def/agp/validator</a></td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasRole" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
                     <td><a href="http://www.w3.org/ns/dx/prof/role/validation">validation</a></td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="dcterms:conformsTo" href="http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
                     <td><a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language (SHACL)</a></td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="dcterms:format" href="http://purl.org/dc/terms/format">Format</a></th>
                     <td>text/turtle</td>
-                  </tr>
-              </table>
-            </div>
-            <div class="entity resource-descriptor" id="https://w3id.org/idn/def/agp/validator-compounded">
-              <h3>Compounded Validator in SHACL</h3>
-              <table class="metadata">
-                  <tr>
-                    <th><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></th>
-                    <td>
-                        <p>A validator that contains the Agents Governance Profile validator and those of Profiles and Standards that it profiles.</p>
-                        <p>If data is valida according to this Validator, it is also valid according to all the Profiles and Standards that the Agents Governance Profile derives from.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasArtifact" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-                    <td>
-                      <a href="https://w3id.org/idn/def/agp/validator-compounded">https://w3id.org/idn/def/agp/validator-compounded</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasRole" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+                </tr>
+                <tr>
+                    <td id="https://w3id.org/idn/def/agp/validator-compounded">Compounded Validator in SHACL</td>
+                    <td>A validator that contains the IDN Catalogue Profile validator and those of Standards that the IDN Catalogue Profile profiles, particularly DCAT (the DCAT Null Profile)</td>
+                    <td><a href="https://w3id.org/idn/def/agp/validator-compounded">https://w3id.org/idn/def/agp/validator-compounded</a></td>
                     <td><a href="http://www.w3.org/ns/dx/prof/role/validation">validation</a></td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="dcterms:conformsTo" href="http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
                     <td><a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language (SHACL)</a></td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="dcterms:format" href="http://purl.org/dc/terms/format">Format</a></th>
                     <td>text/turtle</td>
-                  </tr>
-              </table>
-            </div>
-            <div class="entity resource-descriptor" id="https://w3id.org/idn/def/agp/aarr">
-              <h3>Agents to Agent Relationship Roles Vocabulary</h3>
-              <table class="metadata">
-                  <tr>
-                    <th><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></th>
-                    <td>CA vocabulary of roles that exist between Agents, that is Persons and Organisations</td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasArtifact" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-                    <td>
-                      <a href="https://w3id.org/idn/def/aarr">https://w3id.org/idn/def/aarr</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasRole" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-                    <td>
-                        <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">vocabulary</a><br />
-                    </td>
-                  </tr>
-              </table>
-            </div>
-            <div class="entity resource-descriptor" id="https://w3id.org/idn/def/agp/repo">
-              <h3>Profile code repository</h3>
-              <table class="metadata">
-                  <tr>
-                    <th><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></th>
+                </tr>
+                <tr>
+                    <td id="https://w3id.org/idn/def/agp/repo">Profile Repository</td>
                     <td>Code repository storing all Profile artifacts</td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasArtifact" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-                    <td>
-                      <a href="https://w3id.org/idn/def/agp/repo">https://w3id.org/idn/def/agp/repo</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><a class="proplink" title="prof:hasRole" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-                    <td>
-                        <a href="http://www.w3.org/ns/dx/prof/role/repository">repository</a><br />
-                    </td>
-                  </tr>
-              </table>
-            </div>
+                    <td><a href="https://w3id.org/idn/def/agp/repo">https://w3id.org/idn/def/agp/repo</a></td>
+                    <td><a href="http://www.w3.org/ns/dx/prof/role/repository">repository</a></td>
+                    <td>Git version control</td>
+                    <td>Git</td>
+                </tr>
+                <tr>
+                    <td id="https://w3id.org/idn/vocab/aarr">Agents to Agent Relationship Roles Vocabulary</td>
+                    <td>A vocabulary of roles that exist between Agents, that is Persons and Organisations</td>
+                    <td><a href="https://w3id.org/idn/vocab/aarr">https://w3id.org/idn/vocab/aarr</a></td>
+                    <td><a href="http://www.w3.org/ns/dx/prof/role/vocabulary">vocabulary</a></td>
+                    <td><a href="https://www.w3.org/TR/skos-reference/">SKOS Simple Knowledge Organization System</a></td>
+                    <td>text/turtle, text/html</td>
+                </tr>
+            </table>
         </section>
         <section id="namespaces">
         <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
