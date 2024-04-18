@@ -166,29 +166,29 @@
                 <h4>1.1 Modelling elements</h4>
                 <p>Informally, the main modelling elements within this Specification are show in the figure below.</p>
                 <div id="fig-overview" class="figure">
-                    <a href="https://idn-au.github.io/agents-governance-profile/resources/img/Overview.png"><img src="https://idn-au.github.io/agents-governance-profile/resources/img/Overview.png" alt="Overview figure" style="width:600px;" /></a>
+                    <a href="img/Overview.png"><img src="img/Overview.png" alt="Overview figure" style="width:600px;" /></a>
                     <p class="caption"><strong>Figure Basic Elements:</strong> Overview of elements of this Specification Agents - things with agency - People &amp; Organisations - are indicated with a 5-sided 'house' figure and other classes of object by chamfered rectangles.</p>
                 </div>
                 <p>An example, Person X might have created Data Y and is its "originator" and, Person X belongs to Organisation Z. Through some arrangement, things created by members of Organisation Z are managed by it so Organisation Z is the "custodian" of the data. The figure below shows these relations.</p>
                 <div id="fig-intro-eg-1" class="figure">
-                    <img src="https://idn-au.github.io/agents-governance-profile/resources/img/Intro-EG1.png" alt="Intro Example" style="width:500px;" />
+                    <img src="img/Intro-EG1.png" alt="Intro Example" style="width:500px;" />
                     <p class="caption"><strong>Figure Intro 1:</strong> An informal diagram showing Agent/Agent and Entity/Entity relations</p>
                 </div>
                 <p>The complete key of elements in all the formally-defined figures in this Specification is given in the figure below.</p>
                 <div id="fig-key" class="figure">
-                    <a href="https://idn-au.github.io/agents-governance-profile/resources/img/Key.png"><img src="https://idn-au.github.io/agents-governance-profile/resources/img/Key.png" style="width:200px;" alt="Key figure" /></a>
+                    <a href="img/Key.png"><img src="img/Key.png" style="width:200px;" alt="Key figure" /></a>
                     <p class="caption"><strong>Figure Key:</strong> The modelling elements used in the formally-defined figures in this Specification. These elements are all standard elements within Resource Description Framework [<a href="#rdf">RDF</a>] and Web Ontology Language [<a href="#owl">OWL</a>] models.</p>
                 </div>
                 <p>A formal diagram of the concerns in <a href="#fig-intro-eg-1">Figure Intro 1</a> is given below.</p>
                 <div id="fig-intro-eg-2" class="figure">
-                    <img src="https://idn-au.github.io/agents-governance-profile/resources/img/Intro-EG2.png" alt="Intro Example 2" style="width:600px;" />
+                    <img src="img/Intro-EG2.png" alt="Intro Example 2" style="width:600px;" />
                     <p class="caption"><strong>Figure Intro 2:</strong> A formal OWL/RDF diagram using the elements given in <a href="#fig-key">Figure Key</a> showing the Agent/Agent and Entity/Entity relations of <a href="#fig-intro-eg-1">Figure Intro 1</a></p>
                 </div>
                 <p>The pattern of relationships in <a href="#fig-intro-eg-2">Figure Intro 2</a> above using Blank Nodes is described next.</p>
                 <h4 id="qualified-relations-pattern">1.2 Qualified Relations Pattern</h4>
                 <p>The Entity &rarr; Agent &amp; Agent &rarr; Agent relations modelled by this Specification are done so using the <em>qualified relations</em> pattern  which is described for RDF modelling in the <a href="https://patterns.dataincubator.org/book/qualified-relation.html"><em>Linked Data Patterns</em> online textbook</a> but which are summarised like this:</p>
                 <div class="figure">
-                    <img src="https://idn-au.github.io/agents-governance-profile/resources/img/Qualified.png" alt="Intro Example" style="width:650px;" />
+                    <img src="img/Qualified.png" alt="Intro Example" style="width:650px;" />
                     <p class="caption"><strong>Figure Qualified:</strong> Where Resource A has a relation to Resource B and that relation is described by a role, Resource C, a pattern that interjects an anonymous node (a <code>Blank Node</code>) between A &amp; B can be made that links them via a relationship to C. This figure shows Resource A linked to an anonymous node, [ ], by property x which then links to the target Resource B and the qualifying Resource C.</p>
                 </div>
                 <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalogue Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
@@ -217,7 +217,7 @@
                     <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code> indicating a <code>dcat:Relationship</code> object with the <code>dcat:relation</code> property which, in turn, indicates the second <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
                     <p>Figure AA1 below gives the general pattern and a specific example of data conforming to Req AA1.</p>
                     <div id="fig-aa1" class="figure">
-                    <a href="https://idn-au.github.io/agents-governance-profile/resources/img/AA1.png"><img src="https://idn-au.github.io/agents-governance-profile/resources/img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
+                    <a href="img/AA1.png"><img src="img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
                     <p class="caption"><strong>Figure AA1:</strong> A. The general <em>Qualified Relations Pattern</em> to be followed for <code>Agent</code>/<code>Agent</code> relations. B. A figure of the data in Example AA1 below.</p>
                 </div>
                     <p class="eg">
@@ -249,7 +249,7 @@
                     <p class="req"><strong>Req EA1:</strong> Relationships between <code>Entity</code> instances and <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the <code>Entity</code> indicating a <code>prov:Attribution</code> object with the <code>prov:qualifiedAttribution</code> property which, in turn, indicates the <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
                     <p>Figure EA1 below gives the general pattern and a specific example of data conforming to Req EA1.</p>
                     <div id="fig-ea1" class="figure">
-                    <a href="https://idn-au.github.io/agents-governance-profile/resources/img/EA1.png"><img src="https://idn-au.github.io/agents-governance-profile/resources/img/EA1.png" alt="Figure EA1" style="width:600px;" /></a>
+                    <a href="img/EA1.png"><img src="img/EA1.png" alt="Figure EA1" style="width:600px;" /></a>
                         <p class="caption"><strong>Figure EA1:</strong> A. The general <em>Qualified Relations Pattern</em> to be followed for <code>Entity</code>/<code>Agent</code> relations. B. An example of an E/A relation for the <a href="https://linked.data.gov.au/dataset/asgsed3/ILOC">Indigenous Locations Dataset</a> as per the example EA1 below.</p>
                 </div>
                     <p class="eg">
@@ -325,7 +325,7 @@ isorole:custodian;
                 <p>This Annex defines mappings between this Profile and other Agent modelling systems.</p>
                 <p>For systems that are mapped to that have direct Agent / Agent or Entity / Agent relations properties, such as schema.org's <code><a href="https://schema.org/memberOf">memberOf</a></code> property (agent / Agent) and Dublin Core's <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">publisher</a></code> (Entity / Agent), if a role vocabulary term can be found that exactly or perhaps closely matches the role included within the direct property, a mapping equivalence can be made pas per the Figure Mapping Plan below.</p>
                 <div id="fig-mapping-plan" class="figure">
-                    <img src="https://idn-au.github.io/agents-governance-profile/resources/img/AgentRelations.png" alt="Agent Relations direct property mappings" style="width:500px;" />
+                    <img src="img/AgentRelations.png" alt="Agent Relations direct property mappings" style="width:500px;" />
                     <p class="caption"><strong>Figure Mapping Plan:</strong> Mapping the qualified Agent/Agent relations to direct properties. A. Qualified form; B. Equating a direct property to a qualified relation with a comparable role; C. Some schema.org mapped properties</p>
                 </div>
                 <section id="sdo-mapping">
