@@ -11,10 +11,10 @@ PREFIX sdo: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-<http://w3id.org/idn/def/agp>
+<https://data.idnau.org/pid/agp>
     a owl:Ontology , prof:Profile ;
     dcterms:provenance "This profile of schema.org, PROV-O, DCAT and others was made within the IDN's ID Catalogue project 2021 - 2022."@en ;
-    owl:versionIRI <http://w3id.org/idn/def/agp/0.0.1> ;
+    owl:versionIRI <https://data.idnau.org/pid/agp/0.0.1> ;
     owl:versionInfo "0.0.1" ;
     sdo:codeRespository "https://github.com/idn-au/agents-governance-profile/"^^xsd:anyURI ;
     sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
@@ -52,7 +52,7 @@ If data is valida according to this Validator, it is also valid according to all
     ],
     [
         rdfs:label "Agents to Agent Relationship Roles Vocabulary" ;
-        prof:hasArtifact <https://w3id.org/idn/def/aarr> ;
+        prof:hasArtifact <https://data.idnau.org/pid/vocab/aarr> ;
         prof:hasRole role:vocabulary ;
     ] ,
     [
