@@ -54,7 +54,7 @@
         <div class="content" style="grid-column:1; grid-row:2;"></div>
         <div class="content" id="content" style="grid-column:2; grid-row:2;">
             <h1>Agents Governance Profile - Specification</h1>
-            <div id="description">This is the specification of normative requirements for data conforming to the <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a>.</div>
+            <div id="description">This is the specification of normative requirements for data conforming to the <a href="https://data.idnau.org/pid/agp">Agents Governance Profile</a>.</div>
             <section id="metadata">
                 <h2>Metadata</h2>
                 <dl>
@@ -63,7 +63,7 @@
                     <dt><a class="proplink" title="sdo:name" href="https://schema.org/name">Name</a></dt>
                     <dd>Agents Governance Profile - Specification</dd>
                     <dt><a class="proplink" title="sdo:isPartOf" href="https://schema.org/isPartOf">Is Part Of</a></dt>
-                    <dd><a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a></dd>
+                    <dd><a href="https://data.idnau.org/pid/agp">Agents Governance Profile</a></dd>
                     <dt><a class="proplink" title="sdo:description" href="https://schema.org/description">Description</a></dt>
                     <dd>The specification of normative requirements for data conforming to the Agents Governance Profile.</dd>
                     <dt><a class="proplink" title="sdo:publisher" href="https://schema.org/publisher">Publisher</a>(s)</dt>
@@ -92,7 +92,7 @@
                 <h2>Preamble <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
                 <section id="abstract">
                     <h3>Abstract <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
-                    <p>This is the specification document of the <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a> which is a <a href="https://www.w3.org/TR/dx-prof/#dfn-profile">Profile</a> of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticated Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things), in particular data.</p>
+                    <p>This is the specification document of the <a href="https://data.idnau.org/pid/agp">Agents Governance Profile</a> which is a <a href="https://www.w3.org/TR/dx-prof/#dfn-profile">Profile</a> of several Semantic Web / Knowledge Graph models (ontologies) for the representation of sophisticated Agent (people and organisations) relations, mainly for the purposes of the governance of Entities (things), in particular data.</p>
                     <p>This document specifies requirements of data that must be met for that data to claim conformance to the Agents Governance Profile. Data that conforms to this profile necessarily conforms to those Profiles and Standards that this Profile extends and constrains.</p>
                     <p>This specification document is <em>not</em> to be used for the automated testing of conformance of RDF data to this profile. That role belongs to the machine-readable <em>validation</em> resources:</p>
                     <ul>
@@ -102,7 +102,7 @@
                     <p>The first validator above contains tests for this profile's requirements only. The second contains this profile's tests as well as those from the other Profiles and Standards that this profile, profiles.</p>
                     <p>For the list of all resources within this profile, see the profile definition:</p>
                     <ul>
-                    <li><a href="https://w3id.org/idn/def/agp">Agents Governance Profile Definition</a></li>
+                    <li><a href="https://data.idnau.org/pid/agp">Agents Governance Profile Definition</a></li>
                     </ul>
                 </section>
                 <section id="namespaces">
@@ -110,15 +110,15 @@
                     <p>This document refers to elements of various ontologies by short codes using namespace prefixes. The prefixes and their corresponding namespaces' URIs are:</p>
                     <dl>
                         <dt>aarr</dt>
-                        <dd><code>https://w3id.org/idn/def/aarr/</code></dd>
+                        <dd><code>https://data.idnau.org/pid/vocab/aarr/</code></dd>
                         <dt>agp</dt>
                         <dd><code>https://data.idnau.org/pid/agp/</code></dd>
                         <dt>dcat</dt>
                         <dd><code>http://www.w3.org/ns/dcat#</code></dd>
                         <dt>dcterms</dt>
                         <dd><code>http://purl.org/dc/terms/</code></dd>
-                        <dt>isorole</dt>
-                        <dd><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode</code></dd>
+                        <dt>droles</dt>
+                        <dd><code>https://linked.data.gov.au/def/data-roles/</code></dd>
                         <dt>owl</dt>
                         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
                         <dt>prof</dt>
@@ -162,7 +162,7 @@
             </section>
             <section id="intro">
                 <h2>1. Introduction <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-                <p>The <a href="https://w3id.org/idn/def/agp">Agents Governance Profile</a> is a Profile of several well-known ontologies that represent Agents - People and Organisations - and their relationships to Entities - things. This document, the profile's <em>Specification</em> defines the rules for modelling Agent &rarr; Agent &amp; Entity &rarr; Agent relations.</p>
+                <p>The <a href="https://data.idnau.org/pid/agp">Agents Governance Profile</a> is a Profile of several well-known ontologies that represent Agents - People and Organisations - and their relationships to Entities - things. This document, the profile's <em>Specification</em> defines the rules for modelling Agent &rarr; Agent &amp; Entity &rarr; Agent relations.</p>
                 <h4>1.1 Modelling elements</h4>
                 <p>Informally, the main modelling elements within this Specification are show in the figure below.</p>
                 <div id="fig-overview" class="figure">
@@ -197,7 +197,7 @@
                 <h4>1.4 Origins of this Profile</h4>
                 <p>This Profile's relationships are general in nature - they can be used for many purposes - however the specific motivation for this work was to represent indigenous peoples' relationships to data.</p>
                 <p>Recognising the generic nature of this Profile, the <a href="https://idnau.org">Indigenous Data Network</a>, the publisher of this Profile, is very happy to consider updates to this Profile that others, including non-Australian indigenous groups, propose.</p>
-                <p>Of primary concern for Australian indigenous peoples is data <em>about</em> them, so the IDN has extended the ISO <em>Role Codes</em> vocabulary to contain <em>subject agent</em> and <em>subject agent representative</em> roles in defined in their <a href="https://w3id.org/idn/def/idn-role-codes">IDN Role Codes</a> vocabulary. These roles are also likely of general interest.</p>
+                <p>Of primary concern for Australian indigenous peoples is data <em>about</em> them, so the IDN has extended the ISO <em>Role Codes</em> vocabulary to contain <em>subject agent</em> and <em>subject agent representative</em> roles in defined in their <a href="https://linked.data.gov.au/def/data-roles">IDN Role Codes</a> vocabulary. These roles are also likely of general interest.</p>
                 <h4>1.5 Structure of this Specification</h4>
                 <ul>
                     <li>The <a href="#requirements"><em>Requirements</em></a> section following this one defines the individual modelling patterns and element values that must be used by data wishing to conform to this Profile. </li>
@@ -222,6 +222,13 @@
                 </div>
                     <p class="eg">
                         <span>Example AA1: Person X is shown related to Organisation Y using the Qualified Relations Pattern</span>
+PREFIX aarr: &lt;https://data.idnau.org/pid/vocab/aarr/>
+PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>
+PREFIX droles: &lt;https://linked.data.gov.au/def/data-roles>
+PREFIX prov: &lt;http://www.w3.org/ns/prov#>
+PREFIX sdo: &lt;https://schema.org/>
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
+
 &lt;http://example.com/agent/person-x&gt;
     a sdo:Person ;
     sdo:name "Person X" ;
@@ -242,7 +249,7 @@
     skos:prefLabel "Member Of"@en ;
 .
                     </p>
-                    <p class="req"><strong>Req AA2:</strong> The role of <code>Agent</code> / <code>Agent</code> relations SHOULD be indicated with terms from this profile's <a href="http://idn.kurrawong.net/vocab/aarr">Agent to Agent Relations Roles vocabulary</a> or vocabularies extending it.</p>
+                    <p class="req"><strong>Req AA2:</strong> The role of <code>Agent</code> / <code>Agent</code> relations SHOULD be indicated with terms from this profile's <a href="https://data.idnau.org/pid/vocab/aarr">Agent to Agent Relations Roles vocabulary</a> or vocabularies extending it.</p>
                 </section>
                 <section id="entity-agent">
                     <h3>2.1.2 Entity &rarr; Agent Relations</h3>
@@ -254,13 +261,19 @@
                 </div>
                     <p class="eg">
                         <span>Example EA1: Indigenous Locations Dataset, an Entity, is shown related to the Australian Bureau of Statistics, an Organisation, using the  Qualified Relations Pattern</span>
+PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>
+PREFIX droles: &lt;https://linked.data.gov.au/def/data-roles>
+PREFIX prov: &lt;http://www.w3.org/ns/prov#>
+PREFIX sdo: &lt;https://schema.org/>
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
+
 &lt;https://linked.data.gov.au/dataset/asgsed3/ILOC&gt;
     a dcat:Dataset ;
     sdo:name "Indigenous Locations Dataset" ;
     prov:qualifiedAttribution [
         a prov:Attribution ;
         prov:agent &lt;https://linked.data.gov.au/org/abs&gt; ;
-        dcat:hadRole isorole:custodian ;
+        dcat:hadRole droles:custodian ;
     ] ;
 .
 
@@ -269,7 +282,7 @@
     sdo:name "Australian Bureau of Statistics" ;
 .
 
-isorole:custodian;
+droles:custodian;
     a skos:Concept ;
     skos:prefLabel "Custodian"@en ;
 .
@@ -294,29 +307,29 @@ isorole:custodian;
                     <h3>A.1. Agent to Agent Relations Roles Vocabulary<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
                     <p>The Agent to Agent Relations Roles Vocabulary (AARR) was developed as part of this profile. It is online in authoritative form at:</p>
                     <ul>
-                        <li><a href="https://w3id.org/idn/def/aarr">https://w3id.org/idn/def/aarr</a></li>
+                        <li><a href="https://data.idnau.org/pid/vocab/aarr">https://data.idnau.org/pid/vocab/aarr</a></li>
                     </ul>
                     <p>This vocabulary contains roles for relationships between Organisations, Persons and Persons & Organisations and is used in the <a href="#agent-agent">Agent / Agent</a> qualified relations pattern.</p>
                     <p>Some of the roles are:</p>
                     <ul>
-                        <li><a href="https://w3id.org/idn/def/aarr/Member">Member</a>: Person &rarr; Organisation</li>
-                        <li><a href="https://w3id.org/idn/def/aarr/PartOf">Part Of</a>: Organisation &rarr; Organisation</li>
-                        <li><a href="https://w3id.org/idn/def/aarr/DescendantOrganisation">Descendant Organisation</a>: Organisation &rarr; Organisation</li>
-                        <li><a href="https://w3id.org/idn/def/aarr/Proxy">Proxy</a>: Person &rarr; Person</li>
+                        <li><a href="https://data.idnau.org/pid/vocab/aarr/member">Member</a>: Person &rarr; Organisation</li>
+                        <li><a href="https://data.idnau.org/pid/vocab/aarr/partOf">Part Of</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://data.idnau.org/pid/vocab/aarr/descendant">Descendant Organisation</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://data.idnau.org/pid/vocab/aarr/proxy">Proxy</a>: Person &rarr; Person</li>
                     </ul>
                 </section>
                 <section id="entity-agent-roles">
                     <h3>A.2. Entity to Agent Relations Roles Vocabulary<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
                     <p>The Entity to Agent Relations Roles Vocabulary suggested for use with this profile is the:</p>
                     <ul>
-                        <li><a href="https://w3id.org/idn/def/idn-role-codes">IDN Role Codes</a></li>
+                        <li><a href="https://linked.data.gov.au/def/data-roles">IDN Role Codes</a></li>
                     </ul>
                     <p>This vocabulary contains roles for relationships between Entities (things) and Agents (People &amp; Organisations) and is used in the <a href="#entity-agent">Entity / Agent</a> qualified relations pattern.</p>
                     <p>Some of the roles are:</p>
                     <ul>
-                        <li><a href="http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian">Custodian</a>: Person &rarr; Organisation</li>
-                        <li><a href="http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/rightsHolder">Rights Holder</a>: Organisation &rarr; Organisation</li>
-                        <li><a href="https://w3id.org/idn/def/idn-role-codes/subjectAgentRepresentatitve">subjectAgentRepresentatitve</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://linked.data.gov.au/def/data-roles/custodian">Custodian</a>: Person &rarr; Organisation</li>
+                        <li><a href="https://linked.data.gov.au/def/data-roles/rightsHolder">Rights Holder</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://linked.data.gov.au/def/data-roles/subjectAgentRepresentatitve">subjectAgentRepresentatitve</a>: Organisation &rarr; Organisation</li>
                     </ul>
                 </section>
             </section>
@@ -424,7 +437,7 @@ isorole:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
-        dcat:hadRole isorole:author ;
+        dcat:hadRole droles:author ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -439,7 +452,7 @@ isorole:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
-        dcat:hadRole isorole:contributor ;
+        dcat:hadRole droles:contributor ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -454,7 +467,7 @@ isorole:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
-        dcat:hadRole isorole:publisher ;
+        dcat:hadRole droles:publisher ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -469,7 +482,7 @@ isorole:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
-        dcat:hadRole isorole:distributor ;
+        dcat:hadRole droles:distributor ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -484,7 +497,7 @@ isorole:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
-        dcat:hadRole isorole:rightsHolder ;
+        dcat:hadRole droles:rightsHolder ;
         prov:agent &lt;Y&gt;
     ] ;
 .
