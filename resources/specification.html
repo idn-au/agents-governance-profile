@@ -214,7 +214,7 @@
                 </ul>
                 <section id="agent-agent">
                     <h3>2.1 Agent &rarr; Agent Relations</h3>
-                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code> using the <code>dcat:qualifiedRelation</code> property to indicate a <code>dcat:Relationship</code> object which indicates the second <code>Agent</code> with the <code>sdo:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
+                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code>indicating a <code>dcat:Relationship</code> object with the dcat:qualifiedRelation property which, in turn, indicates the second Agent with the sdo:agent property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
                     <p>Figure AA1 below gives the general pattern and a specific example of data conforming to Req AA1.</p>
                     <div id="fig-aa1" class="figure">
                     <a href="img/AA1.png"><img src="img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
@@ -375,7 +375,7 @@ droles:custodian;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
             dcat:hadRole aarr:member ;
-            prov:agent &lt;Y&gt;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -389,7 +389,7 @@ droles:custodian;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
             dcat:hadRole aarr:affiliateOf ;
-            prov:agent &lt;Y&gt;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -403,7 +403,7 @@ droles:custodian;
     dcat:qualifieRelation [
         a dcat:Relationship ;
             dcat:hadRole aarr:part ;
-            prov:agent &lt;Y&gt;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -417,7 +417,7 @@ droles:custodian;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
             dcat:hadRole aarr:partOf ;
-            prov:agent &lt;Y&gt;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
