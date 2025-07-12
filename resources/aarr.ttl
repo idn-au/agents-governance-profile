@@ -7,7 +7,6 @@ PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2022-11-14"^^xsd:date ;
