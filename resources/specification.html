@@ -193,7 +193,7 @@
                 </div>
                 <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalogue Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
                 <h4>1.3 Use of vocabularies</h4>
-                <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Entity &rarr; Agent roles). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
+                <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="https://linked.data.gov.au/def/data-roles">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Entity &rarr; Agent roles). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
                 <h4>1.4 Origins of this Profile</h4>
                 <p>This Profile's relationships are general in nature - they can be used for many purposes - however the specific motivation for this work was to represent indigenous peoples' relationships to data.</p>
                 <p>Recognising the generic nature of this Profile, the <a href="https://idnau.org">Indigenous Data Network</a>, the publisher of this Profile, is very happy to consider updates to this Profile that others, including non-Australian indigenous groups, propose.</p>
@@ -214,7 +214,7 @@
                 </ul>
                 <section id="agent-agent">
                     <h3>2.1 Agent &rarr; Agent Relations</h3>
-                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code> indicating a <code>dcat:Relationship</code> object with the <code>dcat:relation</code> property which, in turn, indicates the second <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
+                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code>indicating a <code>dcat:Relationship</code> object with the dcat:qualifiedRelation property which, in turn, indicates the second Agent with the sdo:agent property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
                     <p>Figure AA1 below gives the general pattern and a specific example of data conforming to Req AA1.</p>
                     <div id="fig-aa1" class="figure">
                     <a href="img/AA1.png"><img src="img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
@@ -232,9 +232,9 @@ PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
 &lt;http://example.com/agent/person-x&gt;
     a sdo:Person ;
     sdo:name "Person X" ;
-    dcat:relation [
+    dcat:qualifiedRelation [
         a dcat:Relationship ;
-        prov:agent &lt;http://example.com/agent/organisation-y&gt; ;
+        sdo:agent &lt;http://example.com/agent/organisation-y&gt; ;
         dcat:hadRole aarr:memberOf ;
     ] ;
 .
@@ -244,7 +244,7 @@ PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
     sdo:name "Organisation Y" ;
 .
 
-&lt;http://example.com/agent-relations/memberOf&gt;
+&lt;https://data.idnau.org/pid/vocab/aarr/memberOf&gt;
     a skos:Concept ;
     skos:prefLabel "Member Of"@en ;
 .
@@ -287,7 +287,7 @@ droles:custodian;
     skos:prefLabel "Custodian"@en ;
 .
                     </p>
-                    <p class="req"><strong>Req EA2:</strong> The role of <code>Entity</code> / <code>Agent</code> relations SHOULD be indicated with terms from the <a href="http://iso.kurrawong.net/vocab/CI_RoleCode">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> or vocabularies extending it.</p>
+                    <p class="req"><strong>Req EA2:</strong> The role of <code>Entity</code> / <code>Agent</code> relations SHOULD be indicated with terms from the <a href="https://linked.data.gov.au/def/data-roles">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> or vocabularies extending it.</p>
                 </section>
             </section>
             <section id="example">
@@ -357,9 +357,10 @@ droles:custodian;
                                 <td>
                                     <pre>
 &lt;X&gt;
-    dcat:relation [
-        dcat:hadRole aarr:memberOf ;
-        prov:agent &lt;Y&gt;
+    dcat:qualifiedRelation [
+        a dcat:Relationship ;
+           dcat:hadRole aarr:memberOf ;
+           sdo:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
@@ -371,9 +372,10 @@ droles:custodian;
                                 <td>A (X) / A (Y)</td>
                                 <td><pre>
 &lt;X&gt;
-    dcat:relation [
-        dcat:hadRole aarr:member ;
-        prov:agent &lt;Y&gt;
+    dcat:qualifiedRelation [
+        a dcat:Relationship ;
+            dcat:hadRole aarr:member ;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -384,9 +386,10 @@ droles:custodian;
                                 <td>A (X) / A (Y)</td>
                                 <td><pre>
 &lt;X&gt;
-    dcat:relation [
-        dcat:hadRole aarr:affiliateOf ;
-        prov:agent &lt;Y&gt;
+    dcat:qualifiedRelation [
+        a dcat:Relationship ;
+            dcat:hadRole aarr:affiliateOf ;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -397,9 +400,10 @@ droles:custodian;
                                 <td>A (X) / A (Y)</td>
                                 <td><pre>
 &lt;X&gt;
-    dcat:relation [
-        dcat:hadRole aarr:part ;
-        prov:agent &lt;Y&gt;
+    dcat:qualifieRelation [
+        a dcat:Relationship ;
+            dcat:hadRole aarr:part ;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -410,9 +414,10 @@ droles:custodian;
                                 <td>A (X) / A (Y)</td>
                                 <td><pre>
 &lt;X&gt;
-    dcat:relation [
-        dcat:hadRole aarr:partOf ;
-        prov:agent &lt;Y&gt;
+    dcat:qualifiedRelation [
+        a dcat:Relationship ;
+            dcat:hadRole aarr:partOf ;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                 </pre></td>
@@ -437,6 +442,7 @@ droles:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
+       a prov:Attribution ;
         dcat:hadRole droles:author ;
         prov:agent &lt;Y&gt;
     ] ;
@@ -452,6 +458,7 @@ droles:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
+       a prov:Attribution ;
         dcat:hadRole droles:contributor ;
         prov:agent &lt;Y&gt;
     ] ;
@@ -467,6 +474,7 @@ droles:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
+        a prov:Attribution ;
         dcat:hadRole droles:publisher ;
         prov:agent &lt;Y&gt;
     ] ;
@@ -482,6 +490,7 @@ droles:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
+       a prov:Attribution ;
         dcat:hadRole droles:distributor ;
         prov:agent &lt;Y&gt;
     ] ;
@@ -497,8 +506,9 @@ droles:custodian;
                                     <pre>
 &lt;X&gt;
     prov:qualifiedAttribution [
-        dcat:hadRole droles:rightsHolder ;
-        prov:agent &lt;Y&gt;
+        a prov:Attribution ;
+            dcat:hadRole droles:rightsHolder ;
+            prov:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
