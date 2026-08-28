@@ -73,13 +73,13 @@
                     <dt><a class="proplink" title="sdo:created" href="https://schema.org/created">Created</a></dt>
                     <dd>2022-11-01</dd>
                     <dt><a class="proplink" title="sdo:dateModified" href="https://schema.org/dateModified">Modified</a></dt>
-                    <dd>2022-11-14</dd>
+                    <dd>2026-08-28</dd>
                     <dt><a class="proplink" title="sdo:dateIssued" href="https://schema.org/dateIssued">Issued</a></dt>
                     <dd>0000-00-00</dd>
                     <dt><a class="proplink" title="owl#versionInfo" href="http://www.w3.org/2002/07/owl#versionInfo">Version Information</a></dt>
-                    <dd>0.0.1</dd>
+                    <dd>0.0.2</dd>
                     <dt><a class="proplink" title="owl#versionIRI" href="http://www.w3.org/2002/07/owl#versionIRI">Version IRI</a></dt>
-                    <dd><a href="https://data.idnau.org/pid/agp/spec/0.0.1">https://data.idnau.org/pid/agp/spec/0.0.1</a></dd>
+                    <dd><a href="https://data.idnau.org/pid/agp/spec/0.0.2">https://data.idnau.org/pid/agp/spec/0.0.2</a></dd>
                     <dt><a class="proplink" title="sdo:license" href="https://schema.org/license">License</a></dt>
                     <dd><a href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International (CC BY 4.0)</a></dd>
                     <dt><a class="proplink" title="sdo:copyrightHolder" href="https://schema.org/copyrightHolder">Copyright Holder</a></dt>
@@ -214,7 +214,7 @@
                 </ul>
                 <section id="agent-agent">
                     <h3>2.1 Agent &rarr; Agent Relations</h3>
-                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code>indicating a <code>dcat:Relationship</code> object with the dcat:qualifiedRelation property which, in turn, indicates the second Agent with the sdo:agent property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
+                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code>indicating a <code>dcat:Relationship</code> object with the dcat:qualifiedRelation property which, in turn, indicates the second Agent with the sdo:agent property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>sdo:roleName</code> property.</p>
                     <p>Figure AA1 below gives the general pattern and a specific example of data conforming to Req AA1.</p>
                     <div id="fig-aa1" class="figure">
                     <a href="img/AA1.png"><img src="img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
@@ -235,7 +235,7 @@ PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
     dcat:qualifiedRelation [
         a dcat:Relationship ;
         sdo:agent &lt;http://example.com/agent/organisation-y&gt; ;
-        dcat:hadRole aarr:memberOf ;
+        sdo:roleName aarr:memberOf ;
     ] ;
 .
 
@@ -253,7 +253,7 @@ PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
                 </section>
                 <section id="entity-agent">
                     <h3>2.1.2 Entity &rarr; Agent Relations</h3>
-                    <p class="req"><strong>Req EA1:</strong> Relationships between <code>Entity</code> instances and <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the <code>Entity</code> indicating a <code>prov:Attribution</code> object with the <code>prov:qualifiedAttribution</code> property which, in turn, indicates the <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>dcat:hadRole</code> property.</p>
+                    <p class="req"><strong>Req EA1:</strong> Relationships between <code>Entity</code> instances and <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the <code>Entity</code> indicating a <code>prov:Attribution</code> object with the <code>prov:qualifiedAttribution</code> property which, in turn, indicates the <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>sdo:roleName</code> property.</p>
                     <p>Figure EA1 below gives the general pattern and a specific example of data conforming to Req EA1.</p>
                     <div id="fig-ea1" class="figure">
                     <a href="img/EA1.png"><img src="img/EA1.png" alt="Figure EA1" style="width:600px;" /></a>
@@ -273,7 +273,7 @@ PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
     prov:qualifiedAttribution [
         a prov:Attribution ;
         prov:agent &lt;https://linked.data.gov.au/org/abs&gt; ;
-        dcat:hadRole droles:custodian ;
+        sdo:roleName droles:custodian ;
     ] ;
 .
 
@@ -359,7 +359,7 @@ droles:custodian;
 &lt;X&gt;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
-           dcat:hadRole aarr:memberOf ;
+           sdo:roleName aarr:memberOf ;
            sdo:agent &lt;Y&gt;
     ] ;
 .
@@ -374,7 +374,7 @@ droles:custodian;
 &lt;X&gt;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
-            dcat:hadRole aarr:member ;
+            sdo:roleName aarr:member ;
             sdo:agent &lt;Y&gt;
     ] ;
 .
@@ -388,7 +388,7 @@ droles:custodian;
 &lt;X&gt;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
-            dcat:hadRole aarr:affiliateOf ;
+            sdo:roleName aarr:affiliateOf ;
             sdo:agent &lt;Y&gt;
     ] ;
 .
@@ -402,7 +402,7 @@ droles:custodian;
 &lt;X&gt;
     dcat:qualifieRelation [
         a dcat:Relationship ;
-            dcat:hadRole aarr:part ;
+            sdo:roleName aarr:part ;
             sdo:agent &lt;Y&gt;
     ] ;
 .
@@ -416,7 +416,7 @@ droles:custodian;
 &lt;X&gt;
     dcat:qualifiedRelation [
         a dcat:Relationship ;
-            dcat:hadRole aarr:partOf ;
+            sdo:roleName aarr:partOf ;
             sdo:agent &lt;Y&gt;
     ] ;
 .
@@ -443,7 +443,7 @@ droles:custodian;
 &lt;X&gt;
     prov:qualifiedAttribution [
        a prov:Attribution ;
-        dcat:hadRole droles:author ;
+        sdo:roleName droles:author ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -459,7 +459,7 @@ droles:custodian;
 &lt;X&gt;
     prov:qualifiedAttribution [
        a prov:Attribution ;
-        dcat:hadRole droles:contributor ;
+        sdo:roleName droles:contributor ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -475,7 +475,7 @@ droles:custodian;
 &lt;X&gt;
     prov:qualifiedAttribution [
         a prov:Attribution ;
-        dcat:hadRole droles:publisher ;
+        sdo:roleName droles:publisher ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -491,7 +491,7 @@ droles:custodian;
 &lt;X&gt;
     prov:qualifiedAttribution [
        a prov:Attribution ;
-        dcat:hadRole droles:distributor ;
+        sdo:roleName droles:distributor ;
         prov:agent &lt;Y&gt;
     ] ;
 .
@@ -507,7 +507,7 @@ droles:custodian;
 &lt;X&gt;
     prov:qualifiedAttribution [
         a prov:Attribution ;
-            dcat:hadRole droles:rightsHolder ;
+            sdo:roleName droles:rightsHolder ;
             prov:agent &lt;Y&gt;
     ] ;
 .
