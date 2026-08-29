@@ -70,12 +70,22 @@
                     <dd><a href="https://linked.data.gov.au/org/idn">Indigenous Data Network</a></dd>
                     <dt><a class="proplink" title="sdo:creator" href="https://schema.org/creator">Creator</a>(s)</dt>
                     <dd><a href="">Nicholas J. Car</a><br/></dd>
-                    <dt><a class="proplink" title="sdo:created" href="https://schema.org/created">Created</a></dt>
-                    <dd>2022-11-01</dd>
-                    <dt><a class="proplink" title="sdo:dateModified" href="https://schema.org/dateModified">Modified</a></dt>
-                    <dd>2026-08-28</dd>
-                    <dt><a class="proplink" title="sdo:dateIssued" href="https://schema.org/dateIssued">Issued</a></dt>
-                    <dd>0000-00-00</dd>
+                    <dt>Dates</dt>
+                    <dd>
+                        <table>
+                        <tr>
+                        <td><a class="proplink" title="sdo:created" href="https://schema.org/created">Created</a></td>
+                        <td>2022-11-01</td>
+                        </tr>
+                        <tr>
+                        <td><a class="proplink" title="sdo:dateModified" href="https://schema.org/dateModified">Modified</a></td>
+                        <td>2026-08-28</td>
+                        </tr>
+                        <tr>
+                        <td><a class="proplink" title="sdo:dateIssued" href="https://schema.org/dateIssued">Issued</a></td>
+                        <td>0000-00-00</td>
+                        </tr>
+                    </table>
                     <dt><a class="proplink" title="owl#versionInfo" href="http://www.w3.org/2002/07/owl#versionInfo">Version Information</a></dt>
                     <dd>0.0.2</dd>
                     <dt><a class="proplink" title="owl#versionIRI" href="http://www.w3.org/2002/07/owl#versionIRI">Version IRI</a></dt>
@@ -108,34 +118,64 @@
                 <section id="namespaces">
                     <h3>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
                     <p>This document refers to elements of various ontologies by short codes using namespace prefixes. The prefixes and their corresponding namespaces' URIs are:</p>
-                    <dl>
-                        <dt>aarr</dt>
-                        <dd><code>https://data.idnau.org/pid/vocab/aarr/</code></dd>
-                        <dt>agp</dt>
-                        <dd><code>https://data.idnau.org/pid/agp/</code></dd>
-                        <dt>dcat</dt>
-                        <dd><code>http://www.w3.org/ns/dcat#</code></dd>
-                        <dt>dcterms</dt>
-                        <dd><code>http://purl.org/dc/terms/</code></dd>
-                        <dt>droles</dt>
-                        <dd><code>https://linked.data.gov.au/def/data-roles/</code></dd>
-                        <dt>owl</dt>
-                        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
-                        <dt>prof</dt>
-                        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
-                        <dt>rdf</dt>
-                        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
-                        <dt>rdfs</dt>
-                        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
-                        <dt>role</dt>
-                        <dd><code>http://www.w3.org/ns/dx/prof/role/</code></dd>
-                        <dt>sdo</dt>
-                        <dd><code>https://schema.org/</code></dd>
-                        <dt>skos</dt>
-                        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
-                        <dt>xsd</dt>
-                        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
-                    </dl>
+            <table>
+                <tr>
+                    <th>aarr</th>
+                    <td><code>https://data.idnau.org/pid/vocab/aarr/</code></td>
+                </tr>
+                <tr>
+                    <th>agp</th>
+                    <td><code>https://data.idnau.org/pid/agp/</code></td>
+                </tr>
+                <tr>
+                    <th>dcat</th>
+                    <td><code>http://www.w3.org/ns/dcat#</code></td>
+                </tr>
+                <tr>
+                    <th>dcterms</th>
+                    <td><code>http://purl.org/dc/terms/</code></td>
+                </tr>
+                <tr>
+                    <th>droles</th>
+                    <td><code>https://linked.data.gov.au/def/data-roles/</code></td>
+                </tr>
+                <tr>
+                    <th>ids</th>
+                    <td><code>http://id.loc.gov/vocabulary/identifiers/</code></td>
+                </tr>
+                <tr>
+                    <th>owl</th>
+                    <td><code>http://www.w3.org/2002/07/owl#</code></td>
+                </tr>
+                <tr>
+                    <th>prof</th>
+                    <td><code>http://www.w3.org/ns/dx/prof/</code></td>
+                </tr>
+                <tr>
+                    <th>rdf</th>
+                    <td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>
+                </tr>
+                <tr>
+                    <th>rdfs</th>
+                    <td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>
+                </tr>
+                <tr>
+                    <th>role</th>
+                    <td><code>http://www.w3.org/ns/dx/prof/role/</code></td>
+                </tr>
+                <tr>
+                    <th>sdo</th>
+                    <td><code>https://schema.org/</code></td>
+                </tr>
+                <tr>
+                    <th>skos</th>
+                    <td><code>http://www.w3.org/2004/02/skos/core#</code></td>
+                </tr>
+                <tr>
+                    <th>xsd</th>
+                    <td><code>http://www.w3.org/2001/XMLSchema#</code></td>
+                </tr>
+            </table>
                 </section>
                 <section id="conformance">
                     <h3>Conformance <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h3>
@@ -148,7 +188,7 @@
                         <dt>Agent</dt>
                         <dd>
                             An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. <br />
-                            <span style="font-size:small; padding-left:5em;">-- from [<a href="#PROV">PROV</a>], <code><a href="https://www.w3.org/TR/prov-o/#Entity">Agent</a></code> class definition</span>
+                            <span style="font-size:small; padding-left:5em;">-- from [<a href="#PROV">PROV</a>], <code><a href="https://www.w3.org/TR/prov-o/#Agent">Agent</a></code> class definition</span>
                         </dd>
                         <dt>Entity</dt>
                         <dd>
@@ -191,7 +231,7 @@
                     <img src="img/Qualified.png" alt="Intro Example" style="width:650px;" />
                     <p class="caption"><strong>Figure Qualified:</strong> Where Resource A has a relation to Resource B and that relation is described by a role, Resource C, a pattern that interjects an anonymous node (a <code>Blank Node</code>) between A &amp; B can be made that links them via a relationship to C. This figure shows Resource A linked to an anonymous node, [ ], by property x which then links to the target Resource B and the qualifying Resource C.</p>
                 </div>
-                <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalogue Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
+                <p>All of the major relationships between Agents & Entities in this Specification use <em>qualified relations</em> patterns taken from the <em>Provenance Ontology</em> [<a href="#prof">PROV</a>] or the <em>Data Catalog Vocabulary</em> [<a href="#dcat">DCAT</a>].</p>
                 <h4>1.3 Use of vocabularies</h4>
                 <p>The definitions of the roles used in the qualified relations roles that Agents take with respect to Entities and other Agents must be formalised in some way and this Profile requires the use of vocabularies of roles for this, in particular the <a href="https://linked.data.gov.au/def/data-roles">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> (for Entity &rarr; Agent roles). Users of this Profile are encouraged to extend these vocabularies, or create their own, to capture roles of interest to them.</p>
                 <h4>1.4 Origins of this Profile</h4>
@@ -214,7 +254,11 @@
                 </ul>
                 <section id="agent-agent">
                     <h3>2.1 Agent &rarr; Agent Relations</h3>
-                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first <code>Agent</code>indicating a <code>dcat:Relationship</code> object with the dcat:qualifiedRelation property which, in turn, indicates the second Agent with the sdo:agent property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>sdo:roleName</code> property.</p>
+                    <p class="req"><strong>Req AA1:</strong> Relationships between <code>Agent</code> instances MAY be modelled 
+                        using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the first 
+                        <code>Agent</code> indicating a <code>dcat:Relationship</code> object with the <code>dcat:qualifiedRelation</code> 
+                        property which, in turn, indicates the second Agent with the <code>sdo:agent</code> property and the role for the 
+                        relationship, as a <code>skos:Concept</code>, with a <code>sdo:roleName</code> property.</p>
                     <p>Figure AA1 below gives the general pattern and a specific example of data conforming to Req AA1.</p>
                     <div id="fig-aa1" class="figure">
                     <a href="img/AA1.png"><img src="img/AA1.png" alt="Figure AA1" style="width:600px;" /></a>
@@ -249,11 +293,17 @@ PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
     skos:prefLabel "Member Of"@en ;
 .
                     </p>
-                    <p class="req"><strong>Req AA2:</strong> The role of <code>Agent</code> / <code>Agent</code> relations SHOULD be indicated with terms from this profile's <a href="https://data.idnau.org/pid/vocab/aarr">Agent to Agent Relations Roles vocabulary</a> or vocabularies extending it.</p>
+                    <p class="req"><strong>Req AA2:</strong> The role of <code>Agent</code> / <code>Agent</code> relations SHOULD 
+                        be indicated with terms from this profile's <a href="https://data.idnau.org/pid/vocab/aarr">Agent to Agent 
+                        Relations Roles vocabulary</a> or vocabularies extending it.</p>
                 </section>
                 <section id="entity-agent">
                     <h3>2.1.2 Entity &rarr; Agent Relations</h3>
-                    <p class="req"><strong>Req EA1:</strong> Relationships between <code>Entity</code> instances and <code>Agent</code> instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> with the <code>Entity</code> indicating a <code>prov:Attribution</code> object with the <code>prov:qualifiedAttribution</code> property which, in turn, indicates the <code>Agent</code> with the <code>prov:agent</code> property and the role for the relationship, as a <code>skos:Concept</code>, with a <code>sdo:roleName</code> property.</p>
+                    <p class="req"><strong>Req EA1:</strong> Relationships between <code>Entity</code> instances and <code>Agent</code> 
+                        instances MUST be modelled using the <em><a href="#qualified-relations-pattern">Qualified Relations Pattern</a></em> 
+                        with the <code>Entity</code> indicating a <code>prov:Attribution</code> object with the <code>prov:qualifiedAttribution</code> 
+                        property which, in turn, indicates the <code>Agent</code> with the <code>sdo:agent</code> property and the role for the 
+                        relationship, as a <code>skos:Concept</code>, with a <code>sdo:roleName</code> property.</p>
                     <p>Figure EA1 below gives the general pattern and a specific example of data conforming to Req EA1.</p>
                     <div id="fig-ea1" class="figure">
                     <a href="img/EA1.png"><img src="img/EA1.png" alt="Figure EA1" style="width:600px;" /></a>
@@ -268,31 +318,35 @@ PREFIX sdo: &lt;https://schema.org/>
 PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#>
 
 &lt;https://linked.data.gov.au/dataset/asgsed3/ILOC&gt;
-    a dcat:Dataset ;
+    a sdo:Dataset ;
     sdo:name "Indigenous Locations Dataset" ;
     prov:qualifiedAttribution [
         a prov:Attribution ;
-        prov:agent &lt;https://linked.data.gov.au/org/abs&gt; ;
+        sdo:agent &lt;https://linked.data.gov.au/org/abs&gt; ;
         sdo:roleName droles:custodian ;
     ] ;
 .
 
 &lt;https://linked.data.gov.au/org/abs&gt;
     a sdo:Organization ;
-    sdo:name "Australian Bureau of Statistics" ;
+    sdo:name "Australian Bureau of Statistics" ,
+    sdo:url &lt;https://www.abs.gov.au/&gt; ;
 .
 
-droles:custodian;
+droles:custodian ;
     a skos:Concept ;
     skos:prefLabel "Custodian"@en ;
 .
                     </p>
-                    <p class="req"><strong>Req EA2:</strong> The role of <code>Entity</code> / <code>Agent</code> relations SHOULD be indicated with terms from the <a href="https://linked.data.gov.au/def/data-roles">International Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> or vocabularies extending it.</p>
+                    <p class="req"><strong>Req EA2:</strong> The role of <code>Entity</code> / <code>Agent</code> relations 
+                        SHOULD be indicated with terms from the <a href="https://linked.data.gov.au/def/data-roles">International 
+                        Organization for Standardization (ISO)'s <em>Role Codes</em> vocabulary</a> or vocabularies extending it.</p>
                 </section>
             </section>
             <section id="example">
                 <h2>3. Extended Example <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-                <p>Snippet examples for many of the Requirements of this Specification are given in the individual Requirements' sections. This section contains a single, larger, example that implements all the Requirements.</p>
+                <p>Snippet examples for many of the Requirements of this Specification are given in the individual Requirements' sections. 
+                This section contains a single, larger, example that implements all the Requirements.</p>
                 <p>This example is valid according to this Profile's <a href="https://data.idnau.org/pid/agp/validator">SHACL Validator</a> &amp; <a href="https://data.idnau.org/pid/agp/validator-compounded">Compounded Validator</a>.</p>
                 <p class="eg">
                             <span>Example: A ...</span>
@@ -329,14 +383,14 @@ droles:custodian;
                     <ul>
                         <li><a href="https://linked.data.gov.au/def/data-roles/custodian">Custodian</a>: Person &rarr; Organisation</li>
                         <li><a href="https://linked.data.gov.au/def/data-roles/rightsHolder">Rights Holder</a>: Organisation &rarr; Organisation</li>
-                        <li><a href="https://linked.data.gov.au/def/data-roles/subjectAgentRepresentatitve">subjectAgentRepresentatitve</a>: Organisation &rarr; Organisation</li>
+                        <li><a href="https://linked.data.gov.au/def/data-roles/subjectAgentRepresentative">subjectAgentRepresentative</a>: Organisation &rarr; Organisation</li>
                     </ul>
                 </section>
             </section>
             <section id="mappings">
                 <h2>Annex B. Mappings<span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
                 <p>This Annex defines mappings between this Profile and other Agent modelling systems.</p>
-                <p>For systems that are mapped to that have direct Agent / Agent or Entity / Agent relations properties, such as schema.org's <code><a href="https://schema.org/memberOf">memberOf</a></code> property (agent / Agent) and Dublin Core's <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">publisher</a></code> (Entity / Agent), if a role vocabulary term can be found that exactly or perhaps closely matches the role included within the direct property, a mapping equivalence can be made pas per the Figure Mapping Plan below.</p>
+                <p>For systems that are mapped to that have direct Agent / Agent or Entity / Agent relations properties, such as schema.org's <code><a href="https://schema.org/memberOf">memberOf</a></code> property (agent / Agent) and Dublin Core's <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a></code> (Entity / Agent), if a role vocabulary term can be found that exactly or perhaps closely matches the role included within the direct property, a mapping equivalence can be made pas per the Figure Mapping Plan below.</p>
                 <div id="fig-mapping-plan" class="figure">
                     <img src="img/AgentRelations.png" alt="Agent Relations direct property mappings" style="width:500px;" />
                     <p class="caption"><strong>Figure Mapping Plan:</strong> Mapping the qualified Agent/Agent relations to direct properties. A. Qualified form; B. Equating a direct property to a qualified relation with a comparable role; C. Some schema.org mapped properties</p>
@@ -444,7 +498,7 @@ droles:custodian;
     prov:qualifiedAttribution [
        a prov:Attribution ;
         sdo:roleName droles:author ;
-        prov:agent &lt;Y&gt;
+        sdo:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
@@ -460,7 +514,7 @@ droles:custodian;
     prov:qualifiedAttribution [
        a prov:Attribution ;
         sdo:roleName droles:contributor ;
-        prov:agent &lt;Y&gt;
+        sdo:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
@@ -476,7 +530,7 @@ droles:custodian;
     prov:qualifiedAttribution [
         a prov:Attribution ;
         sdo:roleName droles:publisher ;
-        prov:agent &lt;Y&gt;
+        sdo:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
@@ -492,7 +546,7 @@ droles:custodian;
     prov:qualifiedAttribution [
        a prov:Attribution ;
         sdo:roleName droles:distributor ;
-        prov:agent &lt;Y&gt;
+        sdo:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
@@ -508,7 +562,7 @@ droles:custodian;
     prov:qualifiedAttribution [
         a prov:Attribution ;
             sdo:roleName droles:rightsHolder ;
-            prov:agent &lt;Y&gt;
+            sdo:agent &lt;Y&gt;
     ] ;
 .
                                     </pre>
@@ -538,7 +592,7 @@ droles:custodian;
                 <dt><a id="semantic-web"></a>Semantic Web</dt>
                 <dd>World Wide Web Consortium. <em>Semantic Web</em> 2015. Web Page. URL: <a href="https://www.w3.org/standards/semanticweb/">https://www.w3.org/standards/semanticweb/</a>, accessed 2020-06-14</dd>
                 <dt><a id="turtle"></a>Turtle</dt>
-                <dd>World Wide Web Consortium. <em>RDF 1.1 Turtle Terse RDF Triple Language</em>, W3C Recommendation (25 February 2014). URL: <a href="https://www.w3.org/standards/semanticweb/">https://www.w3.org/standards/semanticweb/</a></dd>
+                <dd>World Wide Web Consortium. <em>RDF 1.1 Turtle Terse RDF Triple Language</em>, W3C Recommendation (25 February 2014). URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a></dd>
               </dl>
             </section>
         </div><!-- #content -->
